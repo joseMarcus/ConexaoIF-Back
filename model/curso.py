@@ -1,6 +1,5 @@
 from flask_restful import fields
 from helpers.database import db
-from model.instituicao import Instituicao
 
 
 curso_fields = {
@@ -16,13 +15,10 @@ class Curso(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     nome = db.Column(db.String, nullable=False)
 
-    instituicao_id = db.Column(db.Integer, db.ForeignKey('instituicao.id'))
-    instituicao = db.relationship("Instituicao", backref="cursos")
 
 
-    def __init__(self, nome, instituicao: Instituicao):
+    def __init__(self, nome):
         self.nome = nome
-        self.instituicao = instituicao
 
 
     def __repr__(self):

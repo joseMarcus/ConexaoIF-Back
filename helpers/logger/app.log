@@ -1,0 +1,134 @@
+2023-05-29 00:48:20,384 WARNING _internal _log  * Debugger is active!
+2023-05-29 00:48:20,386 INFO _internal _log  * Debugger PIN: 357-696-775
+2023-05-29 00:48:23,032 INFO Mensagem post Post - Mensagens
+2023-05-29 00:48:23,310 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:48:23] "[35m[1mPOST /api/mensagem HTTP/1.1[0m" 201 -
+2023-05-29 00:48:35,882 INFO Mensagem post Post - Mensagens
+2023-05-29 00:48:35,899 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:48:35] "[35m[1mPOST /api/mensagem HTTP/1.1[0m" 201 -
+2023-05-29 00:48:41,041 INFO Mensagem post Post - Mensagens
+2023-05-29 00:48:41,049 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:48:41] "[33mPOST /api/mensagem HTTP/1.1[0m" 404 -
+2023-05-29 00:49:04,375 INFO Aluno get Get - Alunos
+2023-05-29 00:49:04,383 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:49:04] "GET /api/aluno HTTP/1.1" 200 -
+2023-05-29 00:49:24,640 INFO Aluno get Get - Alunos
+2023-05-29 00:49:24,644 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:49:24] "GET /api/aluno HTTP/1.1" 200 -
+2023-05-29 00:49:27,338 INFO Aluno get Get - Alunos
+2023-05-29 00:49:27,343 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:49:27] "GET /api/aluno/1 HTTP/1.1" 200 -
+2023-05-29 00:49:28,862 INFO Aluno get Get - Alunos
+2023-05-29 00:49:28,869 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:49:28] "[33mGET /api/aluno/2 HTTP/1.1[0m" 404 -
+2023-05-29 00:50:50,585 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:50:50] "[35m[1mPOST /api/aluno/2 HTTP/1.1[0m" 500 -
+2023-05-29 00:50:50,801 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:50:50] "GET /api/aluno/2?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2023-05-29 00:50:50,803 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:50:50] "GET /api/aluno/2?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2023-05-29 00:50:50,828 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:50:50] "GET /api/aluno/2?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2023-05-29 00:51:06,420 INFO Aluno get Get - Alunos
+2023-05-29 00:51:06,427 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:51:06] "GET /api/aluno HTTP/1.1" 200 -
+2023-05-29 00:51:14,503 INFO Coordenador get Get - Coordenadores
+2023-05-29 00:51:14,516 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:51:14] "GET /api/coordenador HTTP/1.1" 200 -
+2023-05-29 00:51:20,048 INFO Grupo get Get - Grupos
+2023-05-29 00:51:20,055 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:51:20] "GET /api/grupo HTTP/1.1" 200 -
+2023-05-29 00:51:26,036 INFO Mensagem get Get - Mensagens
+2023-05-29 00:51:26,043 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:51:26] "GET /api/mensagem HTTP/1.1" 200 -
+2023-05-29 00:52:28,997 INFO Aluno post Post - Alunos
+2023-05-29 00:52:29,034 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:52:29] "[35m[1mPOST /api/aluno HTTP/1.1[0m" 201 -
+2023-05-29 00:52:37,250 INFO Aluno get Get - Alunos
+2023-05-29 00:52:37,259 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:52:37] "GET /api/aluno HTTP/1.1" 200 -
+2023-05-29 00:53:19,055 INFO Aluno put Put - Alunos
+2023-05-29 00:53:19,074 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:53:19] "PUT /api/aluno/3 HTTP/1.1" 200 -
+2023-05-29 00:53:22,835 INFO Aluno get Get - Alunos
+2023-05-29 00:53:22,840 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:53:22] "GET /api/aluno/3 HTTP/1.1" 200 -
+2023-05-29 00:53:25,905 INFO Aluno get Get - Alunos
+2023-05-29 00:53:25,909 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:53:25] "GET /api/aluno HTTP/1.1" 200 -
+2023-05-29 00:53:32,945 INFO Aluno delete Delete - Alunos
+2023-05-29 00:53:32,977 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:53:32] "DELETE /api/aluno/3 HTTP/1.1" 200 -
+2023-05-29 00:53:38,586 INFO Aluno delete Delete - Alunos
+2023-05-29 00:53:38,591 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:53:38] "[33mDELETE /api/aluno/4 HTTP/1.1[0m" 404 -
+2023-05-29 00:53:52,318 INFO Coordenador get Get - Coordenadores
+2023-05-29 00:53:52,322 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:53:52] "GET /api/coordenador HTTP/1.1" 200 -
+2023-05-29 00:54:34,117 INFO Coordenador get Get - Coordenadores
+2023-05-29 00:54:34,123 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:54:34] "GET /api/coordenador HTTP/1.1" 200 -
+2023-05-29 00:54:39,989 INFO Coordenador post Post - Coordenadores
+2023-05-29 00:54:40,015 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:54:40] "[35m[1mPOST /api/coordenador HTTP/1.1[0m" 201 -
+2023-05-29 00:54:44,131 INFO Coordenador get Get - Coordenadores
+2023-05-29 00:54:44,137 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:54:44] "GET /api/coordenador HTTP/1.1" 200 -
+2023-05-29 00:55:05,394 INFO Coordenador put Put - Coordenadores
+2023-05-29 00:55:05,406 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:55:05] "PUT /api/coordenador/6 HTTP/1.1" 200 -
+2023-05-29 00:55:15,527 INFO Coordenador get Get - Coordenadores
+2023-05-29 00:55:15,531 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:55:15] "GET /api/coordenador HTTP/1.1" 200 -
+2023-05-29 00:55:25,740 INFO Coordenador delete Delete - Coordenadores
+2023-05-29 00:55:25,824 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:55:25] "[35m[1mDELETE /api/coordenador/4 HTTP/1.1[0m" 500 -
+2023-05-29 00:55:26,136 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:55:26] "GET /api/coordenador/4?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2023-05-29 00:55:26,137 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:55:26] "GET /api/coordenador/4?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2023-05-29 00:55:26,234 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:55:26] "GET /api/coordenador/4?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2023-05-29 00:55:46,379 INFO Coordenador delete Delete - Coordenadores
+2023-05-29 00:55:46,394 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:55:46] "DELETE /api/coordenador/6 HTTP/1.1" 200 -
+2023-05-29 00:56:02,047 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:56:02] "[35m[1mDELETE /api/grupo HTTP/1.1[0m" 500 -
+2023-05-29 00:56:02,215 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:56:02] "[36mGET /api/grupo?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2023-05-29 00:56:02,217 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:56:02] "[36mGET /api/grupo?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2023-05-29 00:56:02,277 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:56:02] "[36mGET /api/grupo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-05-29 00:56:05,858 INFO Grupo get Get - Grupos
+2023-05-29 00:56:05,863 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:56:05] "GET /api/grupo HTTP/1.1" 200 -
+2023-05-29 00:56:14,422 INFO Grupo get Get - Grupos
+2023-05-29 00:56:14,428 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:56:14] "[33mGET /api/grupo/1 HTTP/1.1[0m" 404 -
+2023-05-29 00:56:16,390 INFO Grupo get Get - Grupos
+2023-05-29 00:56:16,394 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:56:16] "GET /api/grupo/4 HTTP/1.1" 200 -
+2023-05-29 00:56:42,337 INFO Grupo post Post - Grupos
+2023-05-29 00:56:42,390 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:56:42] "[35m[1mPOST /api/grupo HTTP/1.1[0m" 500 -
+2023-05-29 00:56:42,721 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:56:42] "[36mGET /api/grupo?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2023-05-29 00:56:42,723 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:56:42] "[36mGET /api/grupo?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2023-05-29 00:56:42,922 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:56:42] "[36mGET /api/grupo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-05-29 00:56:48,802 INFO Grupo post Post - Grupos
+2023-05-29 00:56:48,809 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:56:48] "[35m[1mPOST /api/grupo HTTP/1.1[0m" 201 -
+2023-05-29 00:56:59,779 INFO Grupo get Get - Grupos
+2023-05-29 00:56:59,784 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:56:59] "GET /api/grupo HTTP/1.1" 200 -
+2023-05-29 00:57:16,484 INFO Grupo post Post - Grupos
+2023-05-29 00:57:16,491 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:57:16] "[35m[1mPOST /api/grupo HTTP/1.1[0m" 201 -
+2023-05-29 00:57:31,419 INFO Grupo get Get - Grupos
+2023-05-29 00:57:31,424 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:57:31] "GET /api/grupo HTTP/1.1" 200 -
+2023-05-29 00:57:56,525 INFO Grupo put Put - Grupos
+2023-05-29 00:57:56,540 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:57:56] "PUT /api/grupo/8 HTTP/1.1" 200 -
+2023-05-29 00:58:00,330 INFO Grupo get Get - Grupos
+2023-05-29 00:58:00,334 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:58:00] "GET /api/grupo/8 HTTP/1.1" 200 -
+2023-05-29 00:58:06,683 INFO Grupo delete Delete - Grupos
+2023-05-29 00:58:06,699 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:58:06] "DELETE /api/grupo/8 HTTP/1.1" 200 -
+2023-05-29 00:58:11,415 INFO Grupo get Get - Grupos
+2023-05-29 00:58:11,419 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:58:11] "[33mGET /api/grupo/8 HTTP/1.1[0m" 404 -
+2023-05-29 00:58:13,116 INFO Grupo get Get - Grupos
+2023-05-29 00:58:13,120 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:58:13] "GET /api/grupo HTTP/1.1" 200 -
+2023-05-29 00:58:29,680 INFO Mensagem get Get - Mensagens
+2023-05-29 00:58:29,684 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:58:29] "GET /api/mensagem HTTP/1.1" 200 -
+2023-05-29 00:58:33,540 INFO Mensagem get Get - Mensagens
+2023-05-29 00:58:33,547 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:58:33] "GET /api/mensagem/1 HTTP/1.1" 200 -
+2023-05-29 00:58:35,177 INFO Mensagem get Get - Mensagens
+2023-05-29 00:58:35,181 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:58:35] "[33mGET /api/mensagem/3 HTTP/1.1[0m" 404 -
+2023-05-29 00:58:44,655 INFO Mensagem post Post - Mensagens
+2023-05-29 00:58:44,664 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:58:44] "[33mPOST /api/mensagem HTTP/1.1[0m" 404 -
+2023-05-29 00:58:56,240 INFO Aluno get Get - Alunos
+2023-05-29 00:58:56,246 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:58:56] "GET /api/aluno HTTP/1.1" 200 -
+2023-05-29 00:59:15,347 INFO Mensagem post Post - Mensagens
+2023-05-29 00:59:15,354 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:59:15] "[33mPOST /api/mensagem HTTP/1.1[0m" 404 -
+2023-05-29 00:59:19,219 INFO Mensagem post Post - Mensagens
+2023-05-29 00:59:19,234 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:59:19] "[35m[1mPOST /api/mensagem HTTP/1.1[0m" 201 -
+2023-05-29 00:59:34,429 INFO Mensagem get Get - Mensagens
+2023-05-29 00:59:34,432 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:59:34] "GET /api/mensagem HTTP/1.1" 200 -
+2023-05-29 00:59:51,595 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:59:51] "[35m[1mPUT /api/mensagem HTTP/1.1[0m" 500 -
+2023-05-29 00:59:51,893 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:59:51] "[36mGET /api/mensagem?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2023-05-29 00:59:51,895 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:59:51] "[36mGET /api/mensagem?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2023-05-29 00:59:51,960 INFO _internal _log 127.0.0.1 - - [29/May/2023 00:59:51] "[36mGET /api/mensagem?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-05-29 01:00:14,065 INFO Mensagem put Put - Mensagens
+2023-05-29 01:00:14,087 INFO _internal _log 127.0.0.1 - - [29/May/2023 01:00:14] "PUT /api/mensagem/1 HTTP/1.1" 200 -
+2023-05-29 01:00:18,690 INFO Mensagem get Get - Mensagens
+2023-05-29 01:00:18,694 INFO _internal _log 127.0.0.1 - - [29/May/2023 01:00:18] "GET /api/mensagem/1 HTTP/1.1" 200 -
+2023-05-29 01:00:20,803 INFO Mensagem get Get - Mensagens
+2023-05-29 01:00:20,807 INFO _internal _log 127.0.0.1 - - [29/May/2023 01:00:20] "GET /api/mensagem HTTP/1.1" 200 -
+2023-05-29 01:00:34,671 INFO Mensagem get Get - Mensagens
+2023-05-29 01:00:34,675 INFO _internal _log 127.0.0.1 - - [29/May/2023 01:00:34] "GET /api/mensagem/3 HTTP/1.1" 200 -
+2023-05-29 01:00:40,080 INFO Mensagem put Put - Mensagens
+2023-05-29 01:00:40,103 INFO _internal _log 127.0.0.1 - - [29/May/2023 01:00:40] "PUT /api/mensagem/3 HTTP/1.1" 200 -
+2023-05-29 01:00:44,501 INFO Mensagem get Get - Mensagens
+2023-05-29 01:00:44,505 INFO _internal _log 127.0.0.1 - - [29/May/2023 01:00:44] "GET /api/mensagem/3 HTTP/1.1" 200 -
+2023-05-29 01:00:45,937 INFO Mensagem get Get - Mensagens
+2023-05-29 01:00:45,940 INFO _internal _log 127.0.0.1 - - [29/May/2023 01:00:45] "GET /api/mensagem HTTP/1.1" 200 -
+2023-05-29 01:00:55,238 INFO Mensagem delete Delete - Mensagens
+2023-05-29 01:00:55,252 INFO _internal _log 127.0.0.1 - - [29/May/2023 01:00:55] "DELETE /api/mensagem/3 HTTP/1.1" 200 -
+2023-05-29 01:01:00,188 INFO Mensagem get Get - Mensagens
+2023-05-29 01:01:00,193 INFO _internal _log 127.0.0.1 - - [29/May/2023 01:01:00] "[33mGET /api/mensagem/3 HTTP/1.1[0m" 404 -
+2023-05-29 01:01:03,192 INFO Mensagem get Get - Mensagens
+2023-05-29 01:01:03,196 INFO _internal _log 127.0.0.1 - - [29/May/2023 01:01:03] "GET /api/mensagem HTTP/1.1" 200 -

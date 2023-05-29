@@ -21,8 +21,10 @@ class Mensagem(db.Model):
     periodo_id = db.Column(db.Integer, db.ForeignKey('periodo.id'))
     periodo = db.relationship("Periodo", backref="mensagens")
 
-    def __init__(self, texto):
+    def __init__(self, texto, aluno, periodo):
         self.texto = texto
+        self.aluno = aluno
+        self.periodo = periodo
 
     def __repr__(self):
         return f'<Mensagem {self.texto}>'

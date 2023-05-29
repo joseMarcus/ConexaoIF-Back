@@ -3,6 +3,10 @@ from flask_restful import Api
 from helpers.database import db, migrate
 from helpers.cors import cors
 from resources.Pessoa import PessoaResource, PessoasResource
+from resources.Coordenador import CoordenadorResource
+from resources.Aluno import AlunoResource
+from resources.Grupo import GrupoResource
+from resources.Mensagem import MensagemResource
 from config import DevelopmentConfig, ProductionConfig, TestingConfig
 
 
@@ -35,6 +39,11 @@ cors.init_app(app)
 
 api.add_resource(PessoaResource, '/pessoas')
 api.add_resource(PessoasResource, '/pessoas/<pessoa_id>')
+api.add_resource(CoordenadorResource, '/coordenador', '/coordenador/<int:coordenador_id>')
+api.add_resource(AlunoResource, '/aluno', '/aluno/<int:aluno_id>')
+api.add_resource(GrupoResource, '/grupo', '/grupo/<int:grupo_id>')
+api.add_resource(MensagemResource, '/mensagem', '/mensagem/<int:mensagem_id>')
+
 
 
 app.register_blueprint(api_bp)
