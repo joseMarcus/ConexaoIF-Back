@@ -2,8 +2,19 @@ from flask import Flask, Blueprint
 from flask_restful import Api
 from helpers.database import db, migrate
 from helpers.cors import cors
-from resources.Pessoa import PessoaResource, PessoasResource
 from config import DevelopmentConfig, ProductionConfig, TestingConfig
+
+from resources.Pessoa import PessoaResource, PessoasResource
+from resources.Aluno import AlunoResource, AlunosResource
+from resources.Coordenador import CoordenadorResource, CoordenadoresResource
+from resources.Curso import CursoResource, CursosResource
+from resources.Endereco import EnderecoResource, EnderecosResource
+from resources.Grupo import GrupoResource, GruposResource
+from resources.Instituicao import InstituicaoResource, InstituicoesResource
+from resources.Mensagem import MensagemResource, MensagensResource
+from resources.Periodo import PeriodoResource, PeriodosResource
+from resources.Professor import ProfessorResource, ProfessoresResource
+
 
 
 app = Flask(__name__)
@@ -33,8 +44,36 @@ cors.init_app(app)
 
 
 
-api.add_resource(PessoaResource, '/pessoas')
-api.add_resource(PessoasResource, '/pessoas/<pessoa_id>')
+api.add_resource(PessoaResource, '/pessoa')
+api.add_resource(PessoasResource, '/pessoa/<pessoa_id>')
+
+api.add_resource(AlunoResource, '/aluno')
+api.add_resource(AlunosResource, '/aluno/<aluno_id>')
+
+api.add_resource(CoordenadorResource, '/coordenador')
+api.add_resource(CoordenadoresResource, '/coordenador/<coordenador_id>')
+
+api.add_resource(CursoResource, '/curso')
+api.add_resource(CursosResource, '/curso/<curso_id>')
+
+api.add_resource(EnderecoResource, '/endereco')
+api.add_resource(EnderecosResource, '/endereco/<endereco_id>')
+
+api.add_resource(GrupoResource, '/grupo')
+api.add_resource(GruposResource, '/grupo/<int:grupo_id>')
+
+api.add_resource(InstituicaoResource, '/instituicao')
+api.add_resource(InstituicoesResource, '/instituicao/<int:instituicao_id>')
+
+api.add_resource(MensagemResource, '/mensagem')
+api.add_resource(MensagensResource, '/mensagem/<int:mensagem_id>')
+
+api.add_resource(PeriodoResource, '/periodo')
+api.add_resource(PeriodosResource, '/periodo/<int:periodo_id>')
+
+api.add_resource(ProfessorResource, '/professor')
+api.add_resource(ProfessoresResource, '/professor/<int:professor_id>')
+
 
 
 app.register_blueprint(api_bp)

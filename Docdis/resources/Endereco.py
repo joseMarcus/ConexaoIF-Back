@@ -1,70 +1,86 @@
-from flask_restful import Resource, reqparse, current_app, marshal, marshal_with
-from sqlalchemy import exc
-
+from flask import request
+from flask_restful import Resource, marshal_with, reqparse, marshal
 from helpers.database import db
-
-
-from model.endereco import Endereco
-
+from helpers.logger import log
+from model.endereco import Endereco, endereco_fields
 
 parser = reqparse.RequestParser()
-parser.add_argument('id', required=True)
-parser.add_argument('cep', required=True)
+parser.add_argument('rua', type=str, help='Problema na conversão da rua')
+parser.add_argument('bairro', type=str, help='Problema na conversão do bairro')
+parser.add_argument('cep', type=str, help='Problema na conversão do CEP')
+parser.add_argument('numero', type=str, help='Problema na conversão do número')
+parser.add_argument('complemento', type=str, help='Problema na conversão do complemento')
 
-
-
-class Enderecos(Resource):
+class EnderecoResource(Resource):
+    @marshal_with(endereco_fields)
     def get(self):
-        current_app.logger.info("Get - Endereços")
-        endereco = Endereco.query\
-            .all()
-        return endereco, 200
+        log.info("Get - Endereços")
+        enderecos = Endereco.query.filter_by(excluido=False).all()
+        return enderecos, 200
 
     def post(self):
-        current_app.logger.info("Post - Endereços")
-        try:
-            # JSON
-            args = parser.parse_args()
-            cep = args['cep']
+        log.info("Post - Endereços")
+        args = parser.parse_args()
 
-            # Endereco
-            endereco = Endereco(cep)
-            # Criação do Endereco.
-            db.session.add(endereco)
-            db.session.commit()
-        except exc.SQLAlchemyError as err:
-            current_app.logger.error(err)
-            
+        # Extract endereco data from the request arguments
+        rua = args['rua']
+        bairro = args['bairro']
+        cep = args['cep']
+        numero = args['numero']
+        complemento = args['complemento']
 
-        return 200
+        # Create Endereco instance
+        endereco = Endereco(rua=rua, bairro=bairro, cep=cep, numero=numero, complemento=complemento)
 
+        # Save Endereco to the database
+        db.session.add(endereco)
+        db.session.commit()
+
+        return {'message': 'Endereco created successfully'}, 201
+
+    
+class EnderecosResource(Resource):
+
+    def get(self, endereco_id):
+        log.info("Get - Endereços")
+        endereco = Endereco.query.filter_by(id=endereco_id, excluido=False).first()
+
+        if (endereco is not None):
+            return marshal(endereco, endereco_fields), 201
+        else:
+            return {'message': 'Endereco not found'}, 404
+        
     def put(self, endereco_id):
-        current_app.logger.info("Put - Endereço")
-        try:
-            # Parser JSON
-            args = parser.parse_args()
-            current_app.logger.info("Endereço: %s:" % args)
-            # Evento
-            cep = args['cep']
+        log.info("Put - Endereços")
+        args = parser.parse_args()
 
-            Endereco.query \
-                .filter_by(id=endereco_id) \
-                .update(dict(cep=cep))
-            db.session.commit()
+        # Fetch the Endereco from the database
+        endereco = Endereco.query.filter_by(id=endereco_id, excluido=False).first()
 
-        except exc.SQLAlchemyError:
-            current_app.logger.error("Exceção")
+        if not endereco:
+            return {'message': 'Endereco not found'}, 404
 
-        return 200
+        # Update Endereco attributes based on the request arguments
+        endereco.rua = args.get('rua', endereco.rua)
+        endereco.bairro = args.get('bairro', endereco.bairro)
+        endereco.cep = args.get('cep', endereco.cep)
+        endereco.numero = args.get('numero', endereco.numero)
+        endereco.complemento = args.get('complemento', endereco.complemento)
+
+        # Save the updated Endereco to the database
+        db.session.commit()
+
+        return {'message': 'Endereco updated successfully'}, 200
 
     def delete(self, endereco_id):
-        current_app.logger.info("Delete - Endereço: %s:" % endereco_id)
-        try:
-            Endereco.query.filter_by(id=endereco_id).delete()
+        log.info("Delete - Endereços")
+        # Fetch the Endereco from the database
+        endereco = Endereco.query.filter_by(id=endereco_id, excluido=False).first()
+
+        if endereco is not None:
+            endereco.excluido = True #para delete físico troca isso aqui por "db.session.delete(endereco)"
             db.session.commit()
+            return {'message': 'Endereco deleted successfully'}, 200
 
-        except exc.SQLAlchemyError:
-            current_app.logger.error("Exceção")
-            return 404
-
-        return 200
+        if not endereco:
+            return {'message': 'Endereco not found'}, 404

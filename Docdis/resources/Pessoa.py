@@ -1,127 +1,83 @@
-from flask_restful import Resource, reqparse, marshal_with, marshal
+from flask import request
+from flask_restful import Resource, marshal_with, reqparse, marshal
 from helpers.database import db
-from flask_httpauth import HTTPBasicAuth
-
-from model.pessoa import Pessoa, pessoa_fields
-from model.endereco import Endereco
-from model.aluno import *
-from model.alunogrupo import *
-from model.coordenador import *
-from model.curso import *
-from model.grupo import *
-from model.instituicao import *
-from model.periodo import *
-from model.professor import *
-from model.mensagem import Mensagem, mensagem_fields
-
 from helpers.logger import log
-
-auth = HTTPBasicAuth()
+from model.pessoa import Pessoa, pessoa_fields
 
 parser = reqparse.RequestParser()
 parser.add_argument('nome', type=str, help='Problema na conversão do nome')
 parser.add_argument('email', type=str, help='Problema na conversão do email')
 parser.add_argument('senha', type=str, help='Problema na conversão da senha')
 parser.add_argument('telefone', type=str, help='Problema na conversão do telefone')
-parser.add_argument('endereco', type=dict, required=True)
-
-
-@auth.verify_password
-def verify_password(username, password):
-    # Aqui você deve verificar se o nome de usuário e a senha fornecidos são válidos
-    if username == 'user' and password == 'password':
-        return True
-    return False
 
 class PessoaResource(Resource):
-    @auth.login_required
     @marshal_with(pessoa_fields)
     def get(self):
+        log.info("Get - Pessoas")
         pessoas = Pessoa.query.filter_by(excluido=False).all()
-        return (pessoas, 201)
-    
-        
-    @auth.login_required
-    @marshal_with(pessoa_fields)  
+        return pessoas, 200
+
     def post(self):
+        log.info("Post - Pessoas")
         args = parser.parse_args()
+
         nome = args['nome']
         email = args['email']
         senha = args['senha']
         telefone = args['telefone']
 
-        enderecoArgs = args['endereco']
-        rua = enderecoArgs['rua']
-        bairro = enderecoArgs['bairro']
-        cep = enderecoArgs['cep']
-        numero = enderecoArgs['numero']
-        complemento = enderecoArgs['complemento']
-
-        endereco = Endereco(rua, bairro, cep, numero, complemento)
-        
-        pessoa = Pessoa(nome, email, senha, telefone, endereco)
+        pessoa = Pessoa(nome, email, senha, telefone)
 
         db.session.add(pessoa)
         db.session.commit()
 
-        return pessoa, 201
-    
+        return {'message': 'Person created successfully'}, 201
+
+        
 class PessoasResource(Resource):
-    @auth.login_required
 
     def get(self, pessoa_id):
-        log.info("Identificador de pessoa: " + pessoa_id)
+        log.info("Get - Pessoas")
         pessoa = Pessoa.query.filter_by(id=pessoa_id, excluido=False).first()
 
         if (pessoa is not None):
             return marshal(pessoa, pessoa_fields), 201
         else:
-            mensagem = Mensagem('Pessoa não encontrada', 1)
-            return marshal(mensagem, mensagem_fields), 404
-    @auth.login_required
+            return {'message': 'Person not found'}, 404
 
-    @marshal_with(pessoa_fields)
     def put(self, pessoa_id):
+        log.info("Put - Pessoas")
+        data = request.json
 
-        args = parser.parse_args()
-        nome = args['nome']
-        email = args['email']
-        senha = args['senha']
-        telefone = args['telefone']
-
-
+        # Fetch the Coordenador from the database
         pessoa = Pessoa.query.filter_by(id=pessoa_id, excluido=False).first()
 
-        if pessoa  is not None:
-            pessoa.nome = nome
-            pessoa.email = email
-            pessoa.senha = senha
-            pessoa.telefone = telefone
+        if not pessoa:
+            return {'message': 'Person not found'}, 404
 
-
-
-            db.session.add(pessoa)
-            db.session.commit()
-
-            return marshal(pessoa, pessoa_fields), 201
-
-        else:
-            mensagem = Mensagem('Pessoa não encontrada', 1)
-            return marshal(mensagem, mensagem_fields), 404
+        # Update person attributes based on the request JSON
+        pessoa.nome = data.get('nome', pessoa.nome)
+        pessoa.email = data.get('email', pessoa.email)
+        pessoa.senha = data.get('senha', pessoa.senha)
+        pessoa.telefone = data.get('telefone', pessoa.telefone)
         
-        return pessoa
-    @auth.login_required
+        # Save the updated Coordenador to the database
+        db.session.commit()
+
+        return {'message': 'Person updated successfully'}, 200
 
     def delete(self, pessoa_id):
+        log.info("Delete - Pessoas")
+        # Fetch the Pessoa from the database
         pessoa = Pessoa.query.filter_by(id=pessoa_id, excluido=False).first()
 
         if pessoa is not None:
             pessoa.excluido = True #para delete físico troca isso aqui por "db.session.delete(pessoa)"
             db.session.commit()
+            return {'message': 'Person deleted successfully'}, 200
 
-            mensagem = Mensagem('Pessoa excluída com sucesso', 0)
-            return marshal(mensagem, mensagem_fields), 200
+        if not pessoa:
+            return {'message': 'Person not found'}, 404
+    
 
-        else:
-            mensagem = Mensagem('Pessoa não encontrada', 1)
-            return marshal(mensagem, mensagem_fields), 404
+        
