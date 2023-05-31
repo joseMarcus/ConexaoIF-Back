@@ -3,20 +3,21 @@ from helpers.database import db
 
 periodo_fields = {
     'id': fields.Integer,
-    'semestrereferencia': fields.String
+    'semestrereferencia': fields.Integer
 }
 
 class Periodo(db.Model):
     __tablename__ = "periodo"
 
     id = db.Column(db.Integer, primary_key=True)
-    semestrereferencia = db.Column(db.String, nullable=False)
+    semestrereferencia = db.Column(db.Integer, nullable=False)
+    excluido = db.Column(db.Boolean, default=False)  # Delete lógico
 
-    aluno_id = db.Column(db.Integer, db.ForeignKey('aluno.id'))
-    aluno = db.relationship("Aluno", backref="periodo")
+    
 
     def __init__(self, semestrereferencia):
         self.semestrereferencia = semestrereferencia
+        self.excluido = False
 
     def __repr__(self):
         return f'<Periodo {self.semestrereferencia}>'

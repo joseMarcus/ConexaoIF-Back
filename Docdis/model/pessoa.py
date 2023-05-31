@@ -6,10 +6,10 @@ from sqlalchemy.types import String
 
 pessoa_fields = {
     'id': fields.Integer,
-    'nome': fields.String,
-    'email': fields.String,
-    'senha': fields.String,
-    'telefone': fields.String
+    'nome': fields.String(),
+    'email': fields.String(),
+    'senha': fields.String(),
+    'telefone': fields.String()
 }
 
 class Pessoa(db.Model):

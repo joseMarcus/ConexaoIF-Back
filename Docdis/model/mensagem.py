@@ -15,14 +15,21 @@ class Mensagem(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     texto = db.Column(db.String, nullable=False)
-   
-    aluno_id = db.Column(db.Integer, db.ForeignKey('aluno.id'))
-    aluno = db.relationship("Aluno", backref="mensagens")
-    periodo_id = db.Column(db.Integer, db.ForeignKey('periodo.id'))
-    periodo = db.relationship("Periodo", backref="mensagens")
+    excluido = db.Column(db.Boolean, default=False)  # Delete lógico
 
-    def __init__(self, texto):
+   
+    aluno_id = db.Column(db.Integer, db.ForeignKey('aluno.id'), nullable=False)
+    grupo_id = db.Column(db.Integer, db.ForeignKey('grupo.id'), nullable=False)
+
+    aluno = db.relationship('Aluno', backref='mensagens')
+    grupo = db.relationship('Grupo', backref='mensagens')
+
+    def __init__(self, texto, aluno, grupo):
         self.texto = texto
+        self.aluno = aluno
+        self.grupo = grupo
+        self.excluido = False
+
 
     def __repr__(self):
         return f'<Mensagem {self.texto}>'

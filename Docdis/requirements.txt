@@ -13,3 +13,86 @@ Flask-Cors==3.0.10
 Flask-SQLAlchemy == 3.0.3
 Flask-Migrate == 4.0.4
 psycopg2 == 2.9.6
+
+
+#Endereco
+{
+    "rua": "Rua dos Exemplos",
+    "bairro": "Bairro dos Testes",
+    "cep": "12345-678",
+    "numero": "123",
+    "complemento": "Apartamento 456"
+}
+#Periodo
+{
+    "semestrereferencia": 1
+}
+#Instiuicao
+{
+    "nome": "Instituicao de Exemplo 2",
+    "endereco":  {"id": 1}
+    
+}
+#Curso
+{
+    "nome": "Curso de Artes",
+    "instituicao": {"id": 1}
+    
+}
+#Pessoa
+{
+    "nome": "John Doe",
+    "email": "johndoe@example.com",
+    "senha": "secretpassword",
+    "telefone": "123456789"
+}
+#Aluno
+{
+    "nome": "John Doe",
+    "email": "johndoe@example2.com",
+    "senha": "secretpassword2",
+    "telefone": "123456789",
+    "matricula": "20210001",
+    "periodo": {"id": 7},
+    "instituicao": {"id": 1},
+    "curso": {"id": 1}
+}
+#Professor
+{
+    "nome": "John Doe",
+    "email": "ajjjohndoe@example.com",
+    "senha": "asssecretpassword",
+    "telefone": "123456789",
+    "disciplina": "Computer Science"
+}
+
+#Coordenador
+{
+    "nome": "João",
+    "email": "joao@example.com",
+    "senha": "senha123",
+    "telefone": "123456789",
+    "disciplina": "Matemática",
+    "registrodeTrabalho": "123ABC",
+    "instituicao": {
+        "id": 1
+    },
+    "curso": {
+        "id": 1
+    }
+}
+#Grupo
+{
+  "titulo": "Grupo de Estudo de Python",
+  "link": "https://exemplo.com/grupo_python",
+  "semestreturma": 1,
+  "coordenador": {
+    "id": 27
+  }
+}
+#Mensagem
+{
+    "texto": "Olá, mundo!",
+    "aluno": {"id": 7},
+    "grupo": {"id": 2}
+}

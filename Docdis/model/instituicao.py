@@ -1,6 +1,5 @@
 from flask_restful import fields
 from helpers.database import db
-from model.endereco import Endereco
 
 instituicao_fields = {
     'id': fields.Integer,
@@ -12,12 +11,15 @@ class Instituicao(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     nome = db.Column(db.String, nullable=False)
+    excluido = db.Column(db.Boolean, default=False)  # Delete lógico
 
-    endereco = db.relationship("Endereco", backref="instituicao")
+    endereco_id = db.Column(db.Integer, db.ForeignKey('endereco.id'), nullable=False)
+    endereco = db.relationship('Endereco', backref='instituicoes')
 
-    def __init__(self, nome, endereco: Endereco):
+    def __init__(self, nome, endereco):
         self.nome = nome
         self.endereco = endereco
+        self.excluido = False
 
     def __repr__(self):
         return f'<Instituicao {self.nome}>'
