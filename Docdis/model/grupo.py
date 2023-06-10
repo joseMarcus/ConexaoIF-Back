@@ -1,6 +1,6 @@
 from flask_restful import fields
 from helpers.database import db
-from model.alunogrupo import AlunoGrupo
+from model.coordenador import Coordenador, coordenador_fields
 
 
 
@@ -8,7 +8,8 @@ grupo_fields = {
     'id': fields.Integer,
     'titulo': fields.String,
     'link': fields.String,
-    'semestreturma': fields.Integer
+    'semestreturma': fields.Integer,
+    'coordenador': fields.Nested(coordenador_fields)
 }
 
 class Grupo(db.Model):

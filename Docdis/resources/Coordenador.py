@@ -3,7 +3,6 @@ from flask_restful import Resource, marshal_with, reqparse, marshal
 from helpers.database import db
 from helpers.logger import log
 from model.coordenador import Coordenador, coordenador_fields
-from model.instituicao import Instituicao
 from model.curso import Curso
 
 
@@ -15,7 +14,6 @@ parser.add_argument('telefone', type=str, help='Problema na conversão do telefo
 parser.add_argument('disciplina', type=str, help='Problema na conversão da disciplina')
 parser.add_argument('registrodeTrabalho', type=str, help='Problema na conversão do registro de trabalho')
 
-parser.add_argument('instituicao', type=dict, required=True)
 parser.add_argument('curso', type=dict, required=True)
 
 
@@ -37,23 +35,21 @@ class CoordenadorResource(Resource):
         disciplina = args['disciplina']
         registrodeTrabalho = args['registrodeTrabalho']
 
-        # Extract Instituicao and Curso data from the request JSON
-        instituicao_id = args['instituicao']['id']
-        curso_id = args['curso']['id']
+        # Extract Curso data from the request JSON
+        curso_coordenador_id = args['curso']['id']
 
         # Fetch Instituicao and Curso from the database
-        instituicao = Instituicao.query.filter_by(id=instituicao_id, excluido=False).first()
-        curso = Curso.query.filter_by(id=curso_id, excluido=False).first()
+        curso = Curso.query.filter_by(id=curso_coordenador_id, excluido=False).first()
 
-        if not instituicao or not curso:
-            return {'message': 'Invalid Instituicao or Curso'}, 400
+        if not curso:
+            return {'message': 'Invalid Curso'}, 400
 
         # Create Coordenador instance
         coordenador = Coordenador(nome=nome, email=email, senha=senha, telefone=telefone,
-                                 disciplina=disciplina, registrodeTrabalho=registrodeTrabalho,
-                                 instituicao=instituicao, curso=curso)
+                                 disciplina=disciplina, registrodeTrabalho=registrodeTrabalho, curso=curso)
 
         # Save Coordenador to the database
+        coordenador.curso_coordenador_id = curso.id
         db.session.add(coordenador)
         db.session.commit()
 
@@ -89,13 +85,10 @@ class CoordenadoresResource(Resource):
         coordenador.disciplina = data.get('disciplina', coordenador.disciplina)
         coordenador.registrodeTrabalho = data.get('registrodeTrabalho', coordenador.registrodeTrabalho)
 
-        instituicao_id = data['instituicao'].get('id')
-        if instituicao_id:
-            coordenador.instituicao = Instituicao.query.get(instituicao_id)
 
-        curso_id = data['curso'].get('id')
-        if curso_id:
-            coordenador.curso = Curso.query.get(curso_id)
+        curso_coordenador_id = data['curso'].get('id')
+        if curso_coordenador_id:
+            coordenador.curso = Curso.query.get(curso_coordenador_id)
 
         # Save the updated Coordenador to the database
         db.session.commit()

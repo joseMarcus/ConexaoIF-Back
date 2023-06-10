@@ -4,7 +4,6 @@ from helpers.database import db
 from helpers.logger import log
 from model.aluno import Aluno, aluno_fields
 from model.periodo import Periodo
-from model.instituicao import Instituicao
 from model.curso import Curso
 
 parser = reqparse.RequestParser()
@@ -15,7 +14,6 @@ parser.add_argument('telefone', type=str, help='Problema na conversão do telefo
 parser.add_argument('matricula', type=str, help='Problema na conversão da matrícula')
 
 parser.add_argument('periodo', type=dict, required=True)
-parser.add_argument('instituicao', type=dict, required=True)
 parser.add_argument('curso', type=dict, required=True)
 
 class AlunoResource(Resource):
@@ -37,19 +35,17 @@ class AlunoResource(Resource):
 
         # Fetch the associated objects based on their IDs
         periodo_id = args['periodo']['id']
-        instituicao_id = args['instituicao']['id']
         curso_id = args['curso']['id']
 
         periodo = Periodo.query.filter_by(id=periodo_id, excluido=False).first()
-        instituicao = Instituicao.query.filter_by(id=instituicao_id, excluido=False).first()
         curso = Curso.query.filter_by(id=curso_id, excluido=False).first()
 
-        if not periodo or not instituicao or not curso:
-            return {'message': 'Invalid Periodo, Instituicao, or Curso'}, 400
+        if not periodo or not curso:
+            return {'message': 'Invalid Periodo or Curso'}, 400
 
         # Create Aluno instance
         aluno = Aluno(nome=nome, email=email, senha=senha, telefone=telefone, matricula=matricula,
-                      periodo=periodo, instituicao=instituicao, curso=curso)
+                      periodo=periodo, curso=curso)
 
         # Save Aluno to the database
         db.session.add(aluno)
@@ -102,9 +98,6 @@ class AlunosResource(Resource):
         if periodo_id:
             aluno.periodo = Periodo.query.get(periodo_id)
 
-        instituicao_id = args['instituicao']['id']
-        if instituicao_id:
-            aluno.instituicao = Instituicao.query.get(instituicao_id)
 
         curso_id = args['curso']['id']
         if curso_id:

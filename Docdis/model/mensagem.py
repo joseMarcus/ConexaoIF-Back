@@ -1,12 +1,14 @@
 from flask_restful import fields
 from helpers.database import db
-from model.aluno import Aluno
-from model.periodo import Periodo
+from model.aluno import Aluno, aluno_fields
+from model.grupo import Grupo, grupo_fields
 
 
 mensagem_fields = {
     'id': fields.Integer,
     'texto': fields.String,
+    'aluno': fields.Nested(aluno_fields),
+    'grupo': fields.Nested(grupo_fields)
 
 }
 
