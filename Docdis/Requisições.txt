@@ -84,12 +84,7 @@ Requisições POST de teste(Atenção ao adaptar os ids):
 {
   "titulo": "Grupo do Whatsapp - 5º Período",
   "link": "whatsappweb.com.br",
-  "semestreturma": 5,
-  "coordenador": {"id": 21}
-}
-#Mensagem
-{
-    "texto": "Olá aluno! Seja Bem-vindo ao Grupo do Whats do 1º Período",
-    "aluno": {"id": 3},
-    "grupo": {"id": 2}
+  "mensagem": "Bem vindo!Clique no link para entrar.",
+  "periodo": {"id": 5},
+  "coordenador": {"id": 3}
 }

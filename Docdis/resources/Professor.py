@@ -36,6 +36,9 @@ class ProfessorResource(Resource):
         # Fetch Instituicao and Curso from the database
         curso = Curso.query.filter_by(id=curso_professor_id, excluido=False).first()
 
+        if not curso:
+            return {'message': 'Invalid Curso'}, 400
+
         professor = Professor(nome=nome, email=email, senha=senha, telefone=telefone, disciplina=disciplina, curso=curso)
         db.session.add(professor)
         db.session.commit()

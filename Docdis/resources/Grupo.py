@@ -4,13 +4,15 @@ from helpers.database import db
 from helpers.logger import log
 from model.grupo import Grupo, grupo_fields
 from model.coordenador import Coordenador
+from model.periodo import Periodo
 
 
 parser = reqparse.RequestParser()
 parser.add_argument('titulo', type=str, help='Problema na conversão do título')
 parser.add_argument('link', type=str, help='Problema na conversão do link')
-parser.add_argument('semestreturma', type=str, help='Problema na conversão do semestre/turma')
+parser.add_argument('mensagem', type=str, help='Problema na conversão da mensagem')
 
+parser.add_argument('periodo', type=dict, required=True)
 parser.add_argument('coordenador', type=dict, required=True)
 
 
@@ -26,14 +28,18 @@ class GrupoResource(Resource):
         args = parser.parse_args()
         titulo = args['titulo']
         link = args['link']
-        semestreturma = args['semestreturma']
+        mensagem = args['mensagem']
 
+        periodo_id = args['periodo']['id']
         coordenador_id = args['coordenador']['id']
 
-        # Fetch Instituicao and Curso from the database
+        periodo = Periodo.query.filter_by(id=periodo_id, excluido=False).first()
         coordenador = Coordenador.query.filter_by(id=coordenador_id, excluido=False).first()
         # Create Grupo instance
-        grupo = Grupo(titulo=titulo, link=link, semestreturma=semestreturma, coordenador=coordenador)
+        if not periodo or not coordenador:
+            return {'message': 'Invalid Periodo or Coordenador'}, 400
+        
+        grupo = Grupo(titulo=titulo, link=link, mensagem=mensagem, periodo=periodo, coordenador=coordenador)
 
         # Save Grupo to the database
         db.session.add(grupo)
@@ -66,7 +72,10 @@ class GruposResource(Resource):
         # Update Grupo attributes based on the request arguments
         grupo.titulo = args.get('titulo', grupo.titulo)
         grupo.link = args.get('link', grupo.link)
-        grupo.semestreturma = args.get('semestreturma', grupo.semestreturma)
+        grupo.mensagem = args.get('mensagem', grupo.mensagem)
+        periodo_id = args['periodo']['id']
+        if periodo_id:
+            grupo.periodo = Periodo.query.get(periodo_id)
 
         coordenador_id = args['coordenador']['id']
         if coordenador_id:

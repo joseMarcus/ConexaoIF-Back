@@ -26,6 +26,9 @@ class InstituicaoResource(Resource):
         # Fetch Instituicao and Curso from the database
         endereco = Endereco.query.filter_by(id=endereco_id, excluido=False).first()
 
+        if not endereco:
+            return {'message': 'Invalid Endereco'}, 400
+
         instituicao = Instituicao(nome=nome, endereco=endereco)
         db.session.add(instituicao)
         db.session.commit()

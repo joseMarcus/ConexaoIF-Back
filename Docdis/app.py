@@ -11,7 +11,6 @@ from resources.Curso import CursoResource, CursosResource
 from resources.Endereco import EnderecoResource, EnderecosResource
 from resources.Grupo import GrupoResource, GruposResource
 from resources.Instituicao import InstituicaoResource, InstituicoesResource
-from resources.Mensagem import MensagemResource, MensagensResource
 from resources.Periodo import PeriodoResource, PeriodosResource
 from resources.Professor import ProfessorResource, ProfessoresResource
 
@@ -64,9 +63,6 @@ api.add_resource(GruposResource, '/grupo/<int:grupo_id>')
 
 api.add_resource(InstituicaoResource, '/instituicao')
 api.add_resource(InstituicoesResource, '/instituicao/<int:instituicao_id>')
-
-api.add_resource(MensagemResource, '/mensagem')
-api.add_resource(MensagensResource, '/mensagem/<int:mensagem_id>')
 
 api.add_resource(PeriodoResource, '/periodo')
 api.add_resource(PeriodosResource, '/periodo/<int:periodo_id>')
