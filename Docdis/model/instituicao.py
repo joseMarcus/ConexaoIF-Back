@@ -1,9 +1,11 @@
 from flask_restful import fields
 from helpers.database import db
+from model.endereco import Endereco, endereco_fields
 
 instituicao_fields = {
     'id': fields.Integer,
-    'nome': fields.String
+    'nome': fields.String,
+    'endereco': fields.Nested(endereco_fields)
 }
 
 class Instituicao(db.Model):

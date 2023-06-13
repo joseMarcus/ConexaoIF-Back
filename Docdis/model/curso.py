@@ -6,7 +6,9 @@ from model.instituicao import Instituicao, instituicao_fields
 
 curso_fields = {
     'id': fields.Integer,
-    'nome': fields.String
+    'nome': fields.String,
+    'instituicao': fields.Nested(instituicao_fields)
+
 }
 
 
