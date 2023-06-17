@@ -1,117 +1,123 @@
 from flask import request
-from flask_restful import Resource, marshal_with
+from flask_restful import Resource, marshal_with, reqparse, marshal
 from helpers.database import db
 from helpers.logger import log
-from model.pessoa import Pessoa, pessoa_fields
 from model.aluno import Aluno, aluno_fields
 from model.periodo import Periodo
-from model.endereco import Endereco
-from model.instituicao import Instituicao
 from model.curso import Curso
 
+parser = reqparse.RequestParser()
+parser.add_argument('nome', type=str, help='Problema na conversão do nome')
+parser.add_argument('email', type=str, help='Problema na conversão do email')
+parser.add_argument('senha', type=str, help='Problema na conversão da senha')
+parser.add_argument('telefone', type=str, help='Problema na conversão do telefone')
+parser.add_argument('matricula', type=str, help='Problema na conversão da matrícula')
+
+parser.add_argument('periodo', type=dict, required=True)
+parser.add_argument('curso', type=dict, required=True)
 
 class AlunoResource(Resource):
     @marshal_with(aluno_fields)
-    def get(self, aluno_id=None):
+    def get(self):
         log.info("Get - Alunos")
-        if aluno_id:
-            aluno = Aluno.query.get(aluno_id)
-            if aluno:
-                return aluno, 200
-            else:
-                return {'message': 'Student not found'}, 404
-        else:
-            alunos = Aluno.query.all()
-            return alunos, 200
+        alunos = Aluno.query.filter_by(excluido_aluno=False).all()
+        return alunos, 200
 
     def post(self):
         log.info("Post - Alunos")
-        data = request.json
 
-        # Extract Coordenador data from the request JSON
-        nome = data['nome']
-        email = data['email']
-        senha = data['senha']
-        telefone = data['telefone']
-        matricula = data['matricula']
+        args = parser.parse_args()
+        nome = args['nome']
+        email = args['email']
+        senha = args['senha']
+        telefone = args['telefone']
+        matricula = args['matricula']
 
-        periodo_data = data.get('periodo')
-        if periodo_data:
-            periodo_semestrereferencia = periodo_data['semestrereferencia']
-            periodo = Periodo(semestrereferencia=periodo_semestrereferencia)
-        else:
-            periodo = None
+        # Fetch the associated objects based on their IDs
+        periodo_id = args['periodo']['id']
+        curso_id = args['curso']['id']
 
-        # Extract Instituicao data from the request JSON
-        instituicao_data = data.get('instituicao')
-        if instituicao_data:
-            instituicao_nome = instituicao_data['nome']
-            endereco_data = instituicao_data.get('endereco')
-            curso_data = instituicao_data.get('curso')
-            if curso_data and endereco_data:
-                rua = endereco_data['rua']
-                bairro = endereco_data['bairro']
-                cep = endereco_data['cep']
-                numero = endereco_data['numero']
-                complemento = endereco_data['complemento']
-                endereco = Endereco(rua=rua, bairro=bairro, cep=cep, numero=numero, complemento=complemento)
-                curso_nome = curso_data['nome']
-                curso = Curso(nome=curso_nome)
-            else:
-                endereco = None
-                curso = None
+        periodo = Periodo.query.filter_by(id=periodo_id, excluido=False).first()
+        curso = Curso.query.filter_by(id=curso_id, excluido=False).first()
 
-            instituicao = Instituicao(nome=instituicao_nome, endereco=endereco, curso=curso)
-        else:
-            instituicao = None
+        if not periodo or not curso:
+            return {'message': 'Invalid Periodo or Curso'}, 400
 
-        # Create Coordenador instance
-        aluno = Aluno(nome=nome, email=email, senha=senha, telefone=telefone, matricula=matricula,periodo=periodo, instituicao=instituicao)
+        # Create Aluno instance
+        aluno = Aluno(nome=nome, email=email, senha=senha, telefone=telefone, matricula=matricula,
+                      periodo=periodo, curso=curso)
 
-        # Save Coordenador to the database
+        # Save Aluno to the database
         db.session.add(aluno)
         db.session.commit()
 
         return {'message': 'Student created successfully'}, 201
 
+    
+class AlunosResource(Resource):
+
+    def get(self, aluno_id):
+        log.info("Get - Alunos")
+        aluno = Aluno.query.filter_by(id=aluno_id, excluido_aluno=False).first()
+
+        if (aluno is not None):
+            return marshal(aluno, aluno_fields), 201
+        else:
+            return {'message': 'Student not found'}, 404
+
     def put(self, aluno_id):
         log.info("Put - Alunos")
-        data = request.json
 
-        # Fetch the Coordenador from the database
-        aluno = Aluno.query.get(aluno_id)
+        args = parser.parse_args()
+        nome = args['nome']
+        email = args['email']
+        senha = args['senha']
+        telefone = args['telefone']
+        matricula = args['matricula']
+
+        # Fetch the Aluno from the database
+        aluno = Aluno.query.filter_by(id=aluno_id, excluido_aluno=False).first()
 
         if not aluno:
             return {'message': 'Student not found'}, 404
 
-        # Update Coordenador attributes based on the request JSON
-        if 'nome' in data:
-            aluno.nome = data['nome']
-        if 'email' in data:
-            aluno.email = data['email']
-        if 'senha' in data:
-            aluno.senha = data['senha']
-        if 'telefone' in data:
-            aluno.telefone = data['telefone']
-        if 'matricula' in data:
-            aluno.matricula = data['matricula']
-    
+        # Update Aluno attributes based on the request args
+        if nome:
+            aluno.nome = nome
+        if email:
+            aluno.email = email
+        if senha:
+            aluno.senha = senha
+        if telefone:
+            aluno.telefone = telefone
+        if matricula:
+            aluno.matricula = matricula
 
-        # Save the updated Coordenador to the database
+        # Fetch the associated objects based on their IDs if provided
+        periodo_id = args['periodo']['id']
+        if periodo_id:
+            aluno.periodo = Periodo.query.get(periodo_id)
+
+
+        curso_id = args['curso']['id']
+        if curso_id:
+            aluno.curso = Curso.query.get(curso_id)
+
+        # Save the updated Aluno to the database
         db.session.commit()
 
         return {'message': 'Student updated successfully'}, 200
 
     def delete(self, aluno_id):
         log.info("Delete - Alunos")
-        # Fetch the Coordenador from the database
-        aluno = Aluno.query.get(aluno_id)
+        # Fetch the Aluno from the database
+        aluno = Aluno.query.filter_by(id=aluno_id, excluido_aluno=False).first()
+
+        if aluno is not None:
+            aluno.excluido_aluno = True #para delete físico troca isso aqui por "db.session.delete(aluno)"
+            db.session.commit()
+            return {'message': 'Aluno deleted successfully'}, 200
 
         if not aluno:
-            return {'message': 'Student not found'}, 404
-
-        # Delete the Coordenador from the database
-        db.session.delete(aluno)
-        db.session.commit()
-
-        return {'message': 'Student deleted successfully'}, 200
+            return {'message': 'Aluno not found'}, 404
+    

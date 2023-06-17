@@ -11,7 +11,6 @@ from resources.Curso import CursoResource, CursosResource
 from resources.Endereco import EnderecoResource, EnderecosResource
 from resources.Grupo import GrupoResource, GruposResource
 from resources.Instituicao import InstituicaoResource, InstituicoesResource
-from resources.Mensagem import MensagemResource, MensagensResource
 from resources.Periodo import PeriodoResource, PeriodosResource
 from resources.Professor import ProfessorResource, ProfessoresResource
 from flask_cors import CORS
@@ -32,7 +31,7 @@ else:
     app.config.from_object(DevelopmentConfig())
 
 
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:123@localhost:5432/Docdis"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:123@localhost:5432/IFPB"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
@@ -66,8 +65,6 @@ api.add_resource(GruposResource, '/grupo/<int:grupo_id>')
 
 api.add_resource(InstituicaoResource, '/instituicao')
 api.add_resource(InstituicoesResource, '/instituicao/<int:instituicao_id>')
-api.add_resource(MensagemResource, '/mensagem')
-api.add_resource(MensagensResource, '/mensagem/<int:mensagem_id>')
 api.add_resource(PeriodoResource, '/periodo')
 api.add_resource(PeriodosResource, '/periodo/<int:periodo_id>')
 api.add_resource(ProfessorResource, '/professor')
