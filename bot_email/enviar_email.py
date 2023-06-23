@@ -1,6 +1,6 @@
 from flask_restful import Resource
 from flask import request, jsonify
-from bot_email.email_utils import enviar_email
+from Utils import enviar_email
 
 class EmailResource(Resource):
     def post(self):

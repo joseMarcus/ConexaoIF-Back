@@ -1,7 +1,7 @@
 SMTP_SERVER = 'smtp.gmail.com'
 SMTP_PORT = 587
 EMAIL_SENDER = 'botemail3040@gmail.com'
-EMAIL_PASSWORD = ''
+EMAIL_PASSWORD = 'stnumbubljkbeixj'
 
 
 class Config:
