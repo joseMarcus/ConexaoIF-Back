@@ -1,0 +1,136 @@
+{
+  "emails": [
+    {
+      "id": 111,
+      "tipo": "aluno",
+      "email": "jose.marcus@academico.ifpb.edu.br",
+      "link": "whatsappweb.com.br",
+      "titulo": "Grupo do Whatsapp - 1º Período",
+      "curso_id": 1,
+      "mensagem": "Clique no link para entrar.",
+      "grupo_id": {
+        "id": 10,
+        "titulo": "Grupo do Whatsapp - 1º Período",
+        "link": "whatsappweb.com.br",
+        "mensagem": "Clique no link para entrar.",
+        "periodo": {
+          "id": 1,
+          "semestrereferencia": "1º Período"
+        },
+        "coordenador": {
+          "id": 3,
+          "nome": "Otacílio",
+          "email": "otacilio@academico.ifpb.edu.br",
+          "senha": "otacilio",
+          "telefone": "97777-0909",
+          "disciplina": "Ciência de Dados",
+          "registrodeTrabalho": "0001.1025",
+          "curso": {
+            "id": 1,
+            "nome": "Tecnologia em Sistemas para Internet",
+            "instituicao": {
+              "id": 1,
+              "nome": "Instituto Federal da Paraíba(IFPB) - Campus Guarabira - PB",
+              "endereco": {
+                "id": 1,
+                "rua": "BR 101 Guarabira",
+                "bairro": "Nordeste I",
+                "cep": "58200-000",
+                "numero": "Sem Número",
+                "complemento": "Saída de Guarabira a Araçagi"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 181,
+      "tipo": "aluno",
+      "email": "re.thyerry698@gmail.com",
+      "link": "whatsappweb.com.br",
+      "titulo": "Grupo do Whatsapp - 1º Período",
+      "curso_id": 1,
+      "mensagem": "Clique no link para entrar.",
+      "grupo_id": {
+        "id": 10,
+        "titulo": "Grupo do Whatsapp - 1º Período",
+        "link": "whatsappweb.com.br",
+        "mensagem": "Clique no link para entrar.",
+        "periodo": {
+          "id": 1,
+          "semestrereferencia": "1º Período"
+        },
+        "coordenador": {
+          "id": 3,
+          "nome": "Otacílio",
+          "email": "otacilio@academico.ifpb.edu.br",
+          "senha": "otacilio",
+          "telefone": "97777-0909",
+          "disciplina": "Ciência de Dados",
+          "registrodeTrabalho": "0001.1025",
+          "curso": {
+            "id": 1,
+            "nome": "Tecnologia em Sistemas para Internet",
+            "instituicao": {
+              "id": 1,
+              "nome": "Instituto Federal da Paraíba(IFPB) - Campus Guarabira - PB",
+              "endereco": {
+                "id": 1,
+                "rua": "BR 101 Guarabira",
+                "bairro": "Nordeste I",
+                "cep": "58200-000",
+                "numero": "Sem Número",
+                "complemento": "Saída de Guarabira a Araçagi"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 183,
+      "tipo": "aluno",
+      "email": "wanderson.xper@gmail.com",
+      "link": "whatsappweb.com.br",
+      "titulo": "Grupo do Whatsapp - 1º Período",
+      "curso_id": 1,
+      "mensagem": "Clique no link para entrar.",
+      "grupo_id": {
+        "id": 10,
+        "titulo": "Grupo do Whatsapp - 1º Período",
+        "link": "whatsappweb.com.br",
+        "mensagem": "Clique no link para entrar.",
+        "periodo": {
+          "id": 1,
+          "semestrereferencia": "1º Período"
+        },
+        "coordenador": {
+          "id": 3,
+          "nome": "Otacílio",
+          "email": "otacilio@academico.ifpb.edu.br",
+          "senha": "otacilio",
+          "telefone": "97777-0909",
+          "disciplina": "Ciência de Dados",
+          "registrodeTrabalho": "0001.1025",
+          "curso": {
+            "id": 1,
+            "nome": "Tecnologia em Sistemas para Internet",
+            "instituicao": {
+              "id": 1,
+              "nome": "Instituto Federal da Paraíba(IFPB) - Campus Guarabira - PB",
+              "endereco": {
+                "id": 1,
+                "rua": "BR 101 Guarabira",
+                "bairro": "Nordeste I",
+                "cep": "58200-000",
+                "numero": "Sem Número",
+                "complemento": "Saída de Guarabira a Araçagi"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
