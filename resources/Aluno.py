@@ -2,9 +2,11 @@ from flask import request
 from flask_restful import Resource, marshal_with, reqparse, marshal
 from helpers.database import db
 from helpers.logger import log
+from sqlalchemy.exc import IntegrityError
 from model.aluno import Aluno, aluno_fields
 from model.periodo import Periodo
 from model.curso import Curso
+from model.pessoa import Pessoa
 
 parser = reqparse.RequestParser()
 parser.add_argument('nome', type=str, help='Problema na conversão do nome')
@@ -40,18 +42,29 @@ class AlunoResource(Resource):
         periodo = Periodo.query.filter_by(id=periodo_id, excluido=False).first()
         curso = Curso.query.filter_by(id=curso_id, excluido=False).first()
 
-        if not periodo or not curso:
-            return {'message': 'Invalid Periodo or Curso'}, 400
+        if not periodo:
+            return {'message': 'Invalid Periodo'}, 400
+        if not curso:
+            return {'message': 'Invalid Curso'}, 400
+
+    
+        if Aluno.query.filter(Aluno.email == email).first():
+            return {'message': 'Email already exists'}, 400
+
+        # Check if senha already exists
+        if Aluno.query.filter(Aluno.senha == senha).first():
+            return {'message': 'Senha already exists'}, 400
 
         # Create Aluno instance
         aluno = Aluno(nome=nome, email=email, senha=senha, telefone=telefone, matricula=matricula,
-                      periodo=periodo, curso=curso)
+                    periodo=periodo, curso=curso)
 
         # Save Aluno to the database
         db.session.add(aluno)
         db.session.commit()
 
         return {'message': 'Student created successfully'}, 201
+
 
     
 class AlunosResource(Resource):
@@ -81,32 +94,56 @@ class AlunosResource(Resource):
         if not aluno:
             return {'message': 'Student not found'}, 404
 
-        # Update Aluno attributes based on the request args
-        if nome:
-            aluno.nome = nome
-        if email:
-            aluno.email = email
-        if senha:
-            aluno.senha = senha
-        if telefone:
-            aluno.telefone = telefone
-        if matricula:
-            aluno.matricula = matricula
-
         # Fetch the associated objects based on their IDs if provided
         periodo_id = args['periodo']['id']
-        if periodo_id:
-            aluno.periodo = Periodo.query.get(periodo_id)
-
-
         curso_id = args['curso']['id']
-        if curso_id:
-            aluno.curso = Curso.query.get(curso_id)
 
-        # Save the updated Aluno to the database
-        db.session.commit()
+        periodo = Periodo.query.filter_by(id=periodo_id, excluido=False).first()
+        curso = Curso.query.filter_by(id=curso_id, excluido=False).first()
 
-        return {'message': 'Student updated successfully'}, 200
+        if periodo_id and not periodo:
+            return {'message': 'Invalid Periodo'}, 400
+
+        if curso_id and not curso:
+            return {'message': 'Invalid Curso'}, 400
+
+        try:
+           
+            # Check if email already exists for other students
+            if Aluno.query.filter((Aluno.email == email) & (Aluno.id != aluno_id)).first():
+                return {'message': 'Email already exists'}, 400
+
+            # Check if senha already exists for other students
+            if Aluno.query.filter((Aluno.senha == senha) & (Aluno.id != aluno_id)).first():
+                return {'message': 'Senha already exists'}, 400
+            # Update Aluno attributes based on the request args
+            if nome:
+                aluno.nome = nome
+            if email:
+                aluno.email = email
+            if senha:
+                aluno.senha = senha
+            if telefone:
+                aluno.telefone = telefone
+            if matricula:
+                aluno.matricula = matricula
+
+            if periodo:
+                aluno.periodo = periodo
+
+            if curso:
+                aluno.curso = curso
+
+            # Save the updated Aluno to the database
+            db.session.commit()
+
+            return {'message': 'Student updated successfully'}, 200
+
+        except IntegrityError:
+            db.session.rollback()
+            return {'message': 'Email already exists'}, 400
+
+
 
     def delete(self, aluno_id):
         log.info("Delete - Alunos")

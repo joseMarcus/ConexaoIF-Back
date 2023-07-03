@@ -4,6 +4,9 @@ from helpers.database import db
 from helpers.logger import log
 from model.coordenador import Coordenador, coordenador_fields
 from model.curso import Curso
+from sqlalchemy.exc import IntegrityError
+from model.pessoa import Pessoa
+
 
 
 parser = reqparse.RequestParser()
@@ -43,17 +46,30 @@ class CoordenadorResource(Resource):
 
         if not curso:
             return {'message': 'Invalid Curso'}, 400
+        
+        try:
+            # Check if email or senha already exists
+            # Check if email already exists
+            if Pessoa.query.filter(Coordenador.email == email).first():
+                return {'message': 'Email already exists'}, 400
 
-        # Create Coordenador instance
-        coordenador = Coordenador(nome=nome, email=email, senha=senha, telefone=telefone,
-                                 disciplina=disciplina, registrodeTrabalho=registrodeTrabalho, curso=curso)
+            # Check if senha already exists
+            if Pessoa.query.filter(Coordenador.senha == senha).first():
+                return {'message': 'Senha already exists'}, 400
 
-        # Save Coordenador to the database
-        coordenador.curso_coordenador_id = curso.id
-        db.session.add(coordenador)
-        db.session.commit()
+            # Create Coordenador instance
+            coordenador = Coordenador(nome=nome, email=email, senha=senha, telefone=telefone,
+                                    disciplina=disciplina, registrodeTrabalho=registrodeTrabalho, curso=curso)
 
-        return {'message': 'Coordenador created successfully'}, 201
+            # Save Coordenador to the database
+            coordenador.curso_coordenador_id = curso.id
+            db.session.add(coordenador)
+            db.session.commit()
+
+            return {'message': 'Coordenador created successfully'}, 201
+        except IntegrityError:
+            db.session.rollback()
+            return {'message': 'Email or senha already exists'}, 400
 
     
 class CoordenadoresResource(Resource):
@@ -85,15 +101,31 @@ class CoordenadoresResource(Resource):
         coordenador.disciplina = data.get('disciplina', coordenador.disciplina)
         coordenador.registrodeTrabalho = data.get('registrodeTrabalho', coordenador.registrodeTrabalho)
 
-
+        # Fetch the associated Curso object if provided
         curso_coordenador_id = data['curso'].get('id')
         if curso_coordenador_id:
-            coordenador.curso = Curso.query.get(curso_coordenador_id)
+            curso = Curso.query.get(curso_coordenador_id)
+            if not curso:
+                return {'message': 'Invalid curso ID'}, 400
+            coordenador.curso = curso
 
-        # Save the updated Coordenador to the database
-        db.session.commit()
+        try:
+            # Check if email already exists for another Coordenador
+            if Coordenador.query.filter((Coordenador.email == coordenador.email) & (Coordenador.id != coordenador_id)).first():
+                return {'message': 'Email already exists'}, 400
 
-        return {'message': 'Coordenador updated successfully'}, 200
+            # Check if senha already exists for another Coordenador
+            if Coordenador.query.filter((Coordenador.senha == coordenador.senha) & (Coordenador.id != coordenador_id)).first():
+                return {'message': 'Senha already exists'}, 400
+
+            # Save the updated Coordenador to the database
+            db.session.commit()
+
+            return {'message': 'Coordenador updated successfully'}, 200
+        except IntegrityError:
+            db.session.rollback()
+            return {'message': 'Email or senha already exists'}, 400
+
 
     def delete(self, coordenador_id):
         log.info("Delete - Coordenadores")

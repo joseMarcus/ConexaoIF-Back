@@ -4,6 +4,10 @@ from helpers.database import db
 from helpers.logger import log
 from model.professor import Professor, professor_fields
 from model.curso import Curso, curso_fields
+from sqlalchemy.exc import IntegrityError
+from model.pessoa import Pessoa
+
+
 
 parser = reqparse.RequestParser()
 parser.add_argument('nome', type=str, help='Problema na conversão do nome')
@@ -38,12 +42,25 @@ class ProfessorResource(Resource):
 
         if not curso:
             return {'message': 'Invalid Curso'}, 400
+        
+        try:
+            # Check if email or senha already exists
+            # Check if email already exists
+            if Pessoa.query.filter(Professor.email == email).first():
+                return {'message': 'Email already exists'}, 400
 
-        professor = Professor(nome=nome, email=email, senha=senha, telefone=telefone, disciplina=disciplina, curso=curso)
-        db.session.add(professor)
-        db.session.commit()
+            # Check if senha already exists
+            if Pessoa.query.filter(Professor.senha == senha).first():
+                return {'message': 'Senha already exists'}, 400
 
-        return {'message': 'Professor created successfully'}, 201
+            professor = Professor(nome=nome, email=email, senha=senha, telefone=telefone, disciplina=disciplina, curso=curso)
+            db.session.add(professor)
+            db.session.commit()
+
+            return {'message': 'Professor created successfully'}, 201
+        except IntegrityError:
+            db.session.rollback()
+            return {'message': 'Email or senha already exists'}, 400
 
     
 class ProfessoresResource(Resource):
@@ -70,8 +87,20 @@ class ProfessoresResource(Resource):
         # Fetch the Professor from the database
         professor = Professor.query.filter_by(id=professor_id, excluido_professor=False).first()
 
+
         if not professor:
             return {'message': 'Professor not found'}, 404
+        
+        email = args.get('email')
+        senha = args.get('senha')
+
+        # Verificar se o email já existe
+        if email and Pessoa.query.filter_by(email=email).filter(Professor.id != professor_id).first():
+            return {'message': 'Email already exists'}, 400
+
+        # Verificar se a senha já existe
+        if senha and Pessoa.query.filter_by(senha=senha).filter(Professor.id != professor_id).first():
+            return {'message': 'Senha already exists'}, 400
 
         # Update Professor attributes based on the request args
         if nome:
@@ -85,10 +114,13 @@ class ProfessoresResource(Resource):
         if disciplina:
             professor.disciplina = disciplina
 
-
-        curso_professor_id = args['curso']['id']
+        curso_professor_id = args['curso'].get('id')
         if curso_professor_id:
-            professor.curso = Curso.query.get(curso_professor_id)
+            curso = Curso.query.get(curso_professor_id)
+            if not curso:
+                return {'message': 'Invalid curso ID'}, 400
+            professor.curso = curso
+
 
         # Save the updated Professor to the database
         db.session.commit()

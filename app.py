@@ -1,9 +1,10 @@
-from flask import Flask, Blueprint
+from flask import Flask
+from flask_cors import CORS
 from flask_restful import Api
 from helpers.database import db, migrate
-from helpers.cors import cors
+from flask_jwt_extended import JWTManager
 from config import DevelopmentConfig, ProductionConfig, TestingConfig
-
+from helpers.utils.MRequisicao import api_bp
 from resources.Pessoa import PessoaResource, PessoasResource
 from resources.Aluno import AlunoResource, AlunosResource
 from resources.Coordenador import CoordenadorResource, CoordenadoresResource
@@ -13,10 +14,16 @@ from resources.Grupo import GrupoResource, GruposResource
 from resources.Instituicao import InstituicaoResource, InstituicoesResource
 from resources.Periodo import PeriodoResource, PeriodosResource
 from resources.Professor import ProfessorResource, ProfessoresResource
+from resources.Login import UserLogin
+from resources.Mensagem import EmailResource
+from resources.AlunoGrupo import AlunoGrupoResource, AlunosGrupoResource
+
 
 
 
 app = Flask(__name__)
+CORS(app)
+
 
 
 
@@ -31,15 +38,15 @@ else:
 
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:123@localhost:5432/models"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['JWT_SECRET_KEY'] = 'super-secret'  # Chave secreta para geração do token
+jwt = JWTManager(app)
 
 
 
-api_bp = Blueprint('api', __name__)
-api = Api(api_bp, prefix='/api')
 
 db.init_app(app)
 migrate.init_app(app, db)
-cors.init_app(app)
+api = Api(api_bp, prefix='/api')
 
 
 
@@ -70,11 +77,15 @@ api.add_resource(PeriodosResource, '/periodo/<int:periodo_id>')
 api.add_resource(ProfessorResource, '/professor')
 api.add_resource(ProfessoresResource, '/professor/<int:professor_id>')
 
+api.add_resource(AlunoGrupoResource, '/alunogrupo')
+api.add_resource(AlunosGrupoResource, '/alunogrupo/<int:alunogrupo_id>')
 
+api.add_resource(UserLogin, '/login')
 
 app.register_blueprint(api_bp)
 
+api.add_resource(EmailResource, '/send')
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  
     app.run()

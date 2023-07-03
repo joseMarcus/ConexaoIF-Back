@@ -64,9 +64,17 @@ class CursosResource(Resource):
         curso.nome = args.get('nome', curso.nome)
 
         instituicao_data = args.get('instituicao')
-        if instituicao_data and 'id' in instituicao_data:
-            instituicao_id = instituicao_data['id']
-            curso.instituicao = Instituicao.query.get(instituicao_id)
+        if instituicao_data:
+            if 'id' in instituicao_data:
+                instituicao_id = instituicao_data['id']
+                instituicao = Instituicao.query.get(instituicao_id)
+                if not instituicao:
+                    return {'message': 'Invalid Instituicao'}, 400
+            else:
+                return {'message': 'Invalid Instituicao'}, 400
+
+            curso.instituicao = instituicao
+
 
         # Save the updated Curso to the database
         db.session.commit()

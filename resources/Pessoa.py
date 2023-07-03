@@ -3,6 +3,8 @@ from flask_restful import Resource, marshal_with, reqparse, marshal
 from helpers.database import db
 from helpers.logger import log
 from model.pessoa import Pessoa, pessoa_fields
+from sqlalchemy.exc import IntegrityError
+
 
 parser = reqparse.RequestParser()
 parser.add_argument('nome', type=str, help='Problema na conversão do nome')
@@ -26,12 +28,25 @@ class PessoaResource(Resource):
         senha = args['senha']
         telefone = args['telefone']
 
-        pessoa = Pessoa(nome, email, senha, telefone)
+        try:
+            # Check if email or senha already exists
+            # Check if email already exists
+            if Pessoa.query.filter(Pessoa.email == email).first():
+                return {'message': 'Email already exists'}, 400
 
-        db.session.add(pessoa)
-        db.session.commit()
+            # Check if senha already exists
+            if Pessoa.query.filter(Pessoa.senha == senha).first():
+                return {'message': 'Senha already exists'}, 400
 
-        return {'message': 'Person created successfully'}, 201
+            pessoa = Pessoa(nome, email, senha, telefone)
+
+            db.session.add(pessoa)
+            db.session.commit()
+
+            return {'message': 'Person created successfully'}, 201
+        except IntegrityError:
+            db.session.rollback()
+            return {'message': 'Email or senha already exists'}, 400
 
         
 class PessoasResource(Resource):
@@ -60,6 +75,22 @@ class PessoasResource(Resource):
         pessoa.email = data.get('email', pessoa.email)
         pessoa.senha = data.get('senha', pessoa.senha)
         pessoa.telefone = data.get('telefone', pessoa.telefone)
+        
+        email = data.get('email', pessoa.email)
+        senha = data.get('senha', pessoa.senha)
+
+        # Verificar se o email já existe
+        if Pessoa.query.filter_by(email=email).filter(Pessoa.id != pessoa_id).first():
+            return {'message': 'Email already exists'}, 400
+
+        # Verificar se a senha já existe
+        if Pessoa.query.filter_by(senha=senha).filter(Pessoa.id != pessoa_id).first():
+            return {'message': 'Senha already exists'}, 400
+
+        # Atualizar os atributos da pessoa
+        pessoa.email = email
+        pessoa.senha = senha
+
         
         # Save the updated Coordenador to the database
         db.session.commit()
