@@ -1,55 +1,868 @@
-2023-06-23 15:21:48,291 INFO _internal _log  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-2023-06-23 15:21:59,994 INFO Aluno get Get - Alunos
-2023-06-23 15:22:00,019 INFO Curso get Get - Cursos
-2023-06-23 15:22:00,130 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:22:00] "GET /api/curso HTTP/1.1" 200 -
-2023-06-23 15:22:00,138 INFO Curso get Get - Cursos
-2023-06-23 15:22:00,145 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:22:00] "GET /api/aluno HTTP/1.1" 200 -
-2023-06-23 15:22:00,147 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:22:00] "GET /api/curso HTTP/1.1" 200 -
-2023-06-23 15:22:00,152 INFO Aluno get Get - Alunos
-2023-06-23 15:22:00,165 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:22:00] "GET /api/aluno HTTP/1.1" 200 -
-2023-06-23 15:22:02,170 INFO Grupo get Get - Grupos
-2023-06-23 15:22:02,201 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:22:02] "GET /api/grupo?curso_id=1 HTTP/1.1" 200 -
-2023-06-23 15:22:12,928 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:22:12] "OPTIONS /api/salvar-json HTTP/1.1" 200 -
-2023-06-23 15:22:12,937 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:22:12] "POST /api/salvar-json HTTP/1.1" 200 -
-2023-06-23 15:22:14,549 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:22:14] "GET /get_emails HTTP/1.1" 200 -
-2023-06-23 15:22:14,801 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:22:14] "GET /get_emails HTTP/1.1" 200 -
-2023-06-23 15:23:24,370 INFO Aluno get Get - Alunos
-2023-06-23 15:23:24,370 INFO Curso get Get - Cursos
-2023-06-23 15:23:24,386 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:23:24] "GET /api/curso HTTP/1.1" 200 -
-2023-06-23 15:23:24,386 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:23:24] "GET /api/aluno HTTP/1.1" 200 -
-2023-06-23 15:23:24,386 INFO Curso get Get - Cursos
-2023-06-23 15:23:24,386 INFO Aluno get Get - Alunos
-2023-06-23 15:23:24,401 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:23:24] "GET /api/curso HTTP/1.1" 200 -
-2023-06-23 15:23:24,401 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:23:24] "GET /api/aluno HTTP/1.1" 200 -
-2023-06-23 15:23:26,002 INFO Grupo get Get - Grupos
-2023-06-23 15:23:26,017 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:23:26] "GET /api/grupo?curso_id=1 HTTP/1.1" 200 -
-2023-06-23 15:23:34,318 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:23:34] "OPTIONS /api/salvar-json HTTP/1.1" 200 -
-2023-06-23 15:23:34,325 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:23:34] "POST /api/salvar-json HTTP/1.1" 200 -
-2023-06-23 15:23:36,463 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:23:36] "GET /get_emails HTTP/1.1" 200 -
-2023-06-23 15:23:36,715 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:23:36] "GET /get_emails HTTP/1.1" 200 -
-2023-06-23 15:26:41,656 INFO Aluno get Get - Alunos
-2023-06-23 15:26:41,661 INFO Curso get Get - Cursos
-2023-06-23 15:26:41,664 INFO Grupo get Get - Grupos
-2023-06-23 15:26:41,677 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:26:41] "GET /api/curso HTTP/1.1" 200 -
-2023-06-23 15:26:41,677 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:26:41] "GET /api/aluno HTTP/1.1" 200 -
-2023-06-23 15:26:41,769 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:26:41] "GET /api/grupo?curso_id=1 HTTP/1.1" 200 -
-2023-06-23 15:26:45,457 INFO Aluno get Get - Alunos
-2023-06-23 15:26:45,471 INFO Curso get Get - Cursos
-2023-06-23 15:26:45,471 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:26:45] "GET /api/curso HTTP/1.1" 200 -
-2023-06-23 15:26:45,471 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:26:45] "GET /api/aluno HTTP/1.1" 200 -
-2023-06-23 15:26:45,486 INFO Curso get Get - Cursos
-2023-06-23 15:26:45,486 INFO Aluno get Get - Alunos
-2023-06-23 15:26:45,486 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:26:45] "GET /api/curso HTTP/1.1" 200 -
-2023-06-23 15:26:45,509 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:26:45] "GET /api/aluno HTTP/1.1" 200 -
-2023-06-23 15:26:47,396 INFO Grupo get Get - Grupos
-2023-06-23 15:26:47,418 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:26:47] "GET /api/grupo?curso_id=1 HTTP/1.1" 200 -
-2023-06-23 15:27:01,804 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:27:01] "OPTIONS /api/salvar-json HTTP/1.1" 200 -
-2023-06-23 15:27:01,809 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:27:01] "POST /api/salvar-json HTTP/1.1" 200 -
-2023-06-23 15:27:03,844 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:27:03] "GET /get_emails HTTP/1.1" 200 -
-2023-06-23 15:27:04,117 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:27:04] "GET /get_emails HTTP/1.1" 200 -
-2023-06-23 15:28:06,631 INFO Aluno get Get - Alunos
-2023-06-23 15:28:06,649 INFO Curso get Get - Cursos
-2023-06-23 15:28:06,650 INFO Grupo get Get - Grupos
-2023-06-23 15:28:06,664 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:28:06] "GET /api/curso HTTP/1.1" 200 -
-2023-06-23 15:28:06,669 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:28:06] "GET /api/aluno HTTP/1.1" 200 -
-2023-06-23 15:28:06,675 INFO _internal _log 127.0.0.1 - - [23/Jun/2023 15:28:06] "GET /api/grupo?curso_id=1 HTTP/1.1" 200 -
+2023-07-03 03:52:40,631 INFO _internal _log  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+2023-07-03 03:54:38,359 INFO Coordenador get Get - Coordenadores
+2023-07-03 03:54:38,697 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:54:38] "GET /api/coordenador HTTP/1.1" 200 -
+2023-07-03 03:54:38,700 INFO Coordenador get Get - Coordenadores
+2023-07-03 03:54:38,713 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:54:38] "GET /api/coordenador HTTP/1.1" 200 -
+2023-07-03 03:55:00,857 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:55:00] "OPTIONS /api/login HTTP/1.1" 200 -
+2023-07-03 03:55:00,886 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:55:00] "POST /api/login HTTP/1.1" 200 -
+2023-07-03 03:55:02,559 INFO Curso get Get - Cursos
+2023-07-03 03:55:02,570 INFO Coordenador get Get - Coordenadores
+2023-07-03 03:55:02,575 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:55:02] "GET /api/curso HTTP/1.1" 200 -
+2023-07-03 03:55:02,583 INFO Curso get Get - Cursos
+2023-07-03 03:55:02,594 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:55:02] "GET /api/curso HTTP/1.1" 200 -
+2023-07-03 03:55:02,684 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:55:02] "GET /api/coordenador HTTP/1.1" 200 -
+2023-07-03 03:55:02,690 INFO Coordenador get Get - Coordenadores
+2023-07-03 03:55:02,702 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:55:02] "GET /api/coordenador HTTP/1.1" 200 -
+2023-07-03 03:55:05,262 INFO Aluno get Get - Alunos
+2023-07-03 03:55:05,268 INFO Curso get Get - Cursos
+2023-07-03 03:55:05,282 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:55:05] "GET /api/curso HTTP/1.1" 200 -
+2023-07-03 03:55:05,290 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:55:05] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 03:55:05,291 INFO Curso get Get - Cursos
+2023-07-03 03:55:05,297 INFO Aluno get Get - Alunos
+2023-07-03 03:55:05,303 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:55:05] "GET /api/curso HTTP/1.1" 200 -
+2023-07-03 03:55:05,317 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:55:05] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 03:55:10,333 INFO Aluno get Get - Alunos
+2023-07-03 03:55:10,341 INFO Grupo get Get - Grupos: 
+2023-07-03 03:55:10,342 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 03:55:10,373 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:55:10] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 03:55:10,385 INFO Aluno get Get - Alunos
+2023-07-03 03:55:10,397 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:55:10] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 03:55:10,405 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:55:10] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 03:55:10,406 INFO Grupo get Get - Grupos: 
+2023-07-03 03:55:10,430 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:55:10] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 03:55:10,495 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:55:10] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 03:55:10,499 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 03:55:10,528 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:55:10] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 03:57:04,087 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:57:04] "OPTIONS /api/alunogrupo/38 HTTP/1.1" 200 -
+2023-07-03 03:57:04,099 INFO AlunoGrupo delete Delete - Alunos
+2023-07-03 03:57:04,127 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:57:04] "DELETE /api/alunogrupo/38 HTTP/1.1" 200 -
+2023-07-03 03:57:07,689 INFO Aluno get Get - Alunos
+2023-07-03 03:57:07,690 INFO Grupo get Get - Grupos: 
+2023-07-03 03:57:07,705 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 03:57:07,726 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:57:07] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 03:57:07,739 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:57:07] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 03:57:07,747 INFO Aluno get Get - Alunos
+2023-07-03 03:57:07,764 INFO Grupo get Get - Grupos: 
+2023-07-03 03:57:07,775 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:57:07] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 03:57:07,776 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:57:07] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 03:57:07,789 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 03:57:07,794 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:57:07] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 03:57:07,815 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:57:07] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 03:57:22,607 INFO Aluno get Get - Alunos
+2023-07-03 03:57:22,619 INFO Grupo get Get - Grupos: 
+2023-07-03 03:57:22,623 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 03:57:22,638 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:57:22] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 03:57:22,655 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:57:22] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 03:57:22,667 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:57:22] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 03:57:22,686 INFO Aluno get Get - Alunos
+2023-07-03 03:57:22,690 INFO Grupo get Get - Grupos: 
+2023-07-03 03:57:22,699 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 03:57:22,710 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:57:22] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 03:57:22,725 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:57:22] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 03:57:22,742 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:57:22] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 03:57:29,342 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:57:29] "OPTIONS /api/alunogrupo HTTP/1.1" 200 -
+2023-07-03 03:57:29,348 INFO AlunoGrupo post Post - AlunosGrupo
+2023-07-03 03:57:29,358 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:57:29] "[31m[1mPOST /api/alunogrupo HTTP/1.1[0m" 400 -
+2023-07-03 03:57:33,686 INFO Aluno get Get - Alunos
+2023-07-03 03:57:33,693 INFO Grupo get Get - Grupos: 
+2023-07-03 03:57:33,709 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 03:57:33,714 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:57:33] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 03:57:33,739 INFO Aluno get Get - Alunos
+2023-07-03 03:57:33,749 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:57:33] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 03:57:33,761 INFO Grupo get Get - Grupos: 
+2023-07-03 03:57:33,766 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:57:33] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 03:57:33,768 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:57:33] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 03:57:33,779 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 03:57:33,789 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:57:33] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 03:57:33,807 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:57:33] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 03:58:39,122 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:58:39] "OPTIONS /api/alunogrupo HTTP/1.1" 200 -
+2023-07-03 03:58:39,128 INFO AlunoGrupo post Post - AlunosGrupo
+2023-07-03 03:58:39,132 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 03:58:39] "[31m[1mPOST /api/alunogrupo HTTP/1.1[0m" 400 -
+2023-07-03 04:00:30,150 INFO Aluno get Get - Alunos
+2023-07-03 04:00:30,154 INFO Grupo get Get - Grupos: 
+2023-07-03 04:00:30,158 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:00:30,186 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:00:30] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:00:30,191 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:00:30] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:00:30,199 INFO Aluno get Get - Alunos
+2023-07-03 04:00:30,207 INFO Grupo get Get - Grupos: 
+2023-07-03 04:00:30,211 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:00:30] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:00:30,223 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:00:30,227 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:00:30] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:00:30,238 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:00:30] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:00:30,254 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:00:30] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:03:11,504 INFO Aluno get Get - Alunos
+2023-07-03 04:03:11,505 INFO Grupo get Get - Grupos: 
+2023-07-03 04:03:11,512 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:03:11,531 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:03:11] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:03:11,544 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:03:11] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:03:11,557 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:03:11] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:03:15,653 INFO Aluno get Get - Alunos
+2023-07-03 04:03:15,655 INFO Grupo get Get - Grupos: 
+2023-07-03 04:03:15,660 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:03:15,693 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:03:15] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:03:15,700 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:03:15] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:03:15,707 INFO Aluno get Get - Alunos
+2023-07-03 04:03:15,718 INFO Grupo get Get - Grupos: 
+2023-07-03 04:03:15,723 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:03:15] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:03:15,735 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:03:15] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:03:15,736 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:03:15,749 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:03:15] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:03:15,768 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:03:15] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:03:39,718 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:03:39] "OPTIONS /api/alunogrupo HTTP/1.1" 200 -
+2023-07-03 04:03:39,725 INFO AlunoGrupo post Post - AlunosGrupo
+2023-07-03 04:03:39,726 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:03:39] "[31m[1mPOST /api/alunogrupo HTTP/1.1[0m" 400 -
+2023-07-03 04:03:41,076 INFO AlunoGrupo post Post - AlunosGrupo
+2023-07-03 04:03:41,078 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:03:41] "[31m[1mPOST /api/alunogrupo HTTP/1.1[0m" 400 -
+2023-07-03 04:03:43,727 INFO AlunoGrupo post Post - AlunosGrupo
+2023-07-03 04:03:43,729 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:03:43] "[31m[1mPOST /api/alunogrupo HTTP/1.1[0m" 400 -
+2023-07-03 04:03:44,989 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:03:44] "OPTIONS /api/alunogrupo HTTP/1.1" 200 -
+2023-07-03 04:03:44,997 INFO AlunoGrupo post Post - AlunosGrupo
+2023-07-03 04:03:45,001 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:03:45] "[31m[1mPOST /api/alunogrupo HTTP/1.1[0m" 400 -
+2023-07-03 04:03:46,333 INFO AlunoGrupo post Post - AlunosGrupo
+2023-07-03 04:03:46,335 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:03:46] "[31m[1mPOST /api/alunogrupo HTTP/1.1[0m" 400 -
+2023-07-03 04:03:49,177 INFO Aluno get Get - Alunos
+2023-07-03 04:03:49,188 INFO Grupo get Get - Grupos: 
+2023-07-03 04:03:49,201 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:03:49,209 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:03:49] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:03:49,223 INFO Aluno get Get - Alunos
+2023-07-03 04:03:49,227 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:03:49] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:03:49,239 INFO Grupo get Get - Grupos: 
+2023-07-03 04:03:49,251 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:03:49] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:03:49,256 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:03:49] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:03:49,266 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:03:49] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:03:49,266 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:03:49,291 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:03:49] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:04:47,742 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:04:47] "OPTIONS /api/alunogrupo HTTP/1.1" 200 -
+2023-07-03 04:04:47,749 INFO AlunoGrupo post Post - AlunosGrupo
+2023-07-03 04:04:47,751 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:04:47] "[31m[1mPOST /api/alunogrupo HTTP/1.1[0m" 400 -
+2023-07-03 04:07:47,654 INFO Aluno get Get - Alunos
+2023-07-03 04:07:47,656 INFO Grupo get Get - Grupos: 
+2023-07-03 04:07:47,664 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:07:47,685 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:07:47] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:07:47,696 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:07:47] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:07:47,700 INFO Aluno get Get - Alunos
+2023-07-03 04:07:47,714 INFO Grupo get Get - Grupos: 
+2023-07-03 04:07:47,720 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:07:47] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:07:47,734 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:07:47] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:07:47,742 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:07:47,748 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:07:47] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:07:47,777 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:07:47] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:07:55,242 INFO Aluno get Get - Alunos
+2023-07-03 04:07:55,247 INFO Grupo get Get - Grupos: 
+2023-07-03 04:07:55,257 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:07:55,271 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:07:55] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:07:55,287 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:07:55] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:07:55,291 INFO Aluno get Get - Alunos
+2023-07-03 04:07:55,302 INFO Grupo get Get - Grupos: 
+2023-07-03 04:07:55,322 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:07:55] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:07:55,325 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:07:55] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:07:55,333 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:07:55] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:07:55,335 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:07:55,358 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:07:55] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:08:05,074 INFO Aluno get Get - Alunos
+2023-07-03 04:08:05,087 INFO Grupo get Get - Grupos: 
+2023-07-03 04:08:05,088 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:08:05,099 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:05] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:08:05,117 INFO Aluno get Get - Alunos
+2023-07-03 04:08:05,129 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:05] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:08:05,143 INFO Grupo get Get - Grupos: 
+2023-07-03 04:08:05,146 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:05] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:08:05,150 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:05] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:08:05,160 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:08:05,173 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:05] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:08:05,192 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:05] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:08:20,882 INFO Aluno get Get - Alunos
+2023-07-03 04:08:20,898 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:20] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:08:20,906 INFO Curso get Get - Cursos
+2023-07-03 04:08:20,913 INFO Aluno get Get - Alunos
+2023-07-03 04:08:20,919 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:20] "GET /api/curso HTTP/1.1" 200 -
+2023-07-03 04:08:20,930 INFO Curso get Get - Cursos
+2023-07-03 04:08:20,936 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:20] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:08:20,945 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:20] "GET /api/curso HTTP/1.1" 200 -
+2023-07-03 04:08:22,230 INFO Aluno get Get - Alunos
+2023-07-03 04:08:22,237 INFO Grupo get Get - Grupos: 
+2023-07-03 04:08:22,246 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:08:22,260 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:22] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:08:22,276 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:22] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:08:22,277 INFO Aluno get Get - Alunos
+2023-07-03 04:08:22,292 INFO Grupo get Get - Grupos: 
+2023-07-03 04:08:22,297 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:22] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:08:22,309 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:22] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:08:22,312 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:08:22,322 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:22] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:08:22,351 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:22] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:08:25,734 INFO Periodo get Get - Periodos
+2023-07-03 04:08:25,741 INFO Coordenador get Get - Coordenadores
+2023-07-03 04:08:25,746 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:25] "GET /api/periodo HTTP/1.1" 200 -
+2023-07-03 04:08:25,747 INFO Grupo get Get - Grupos: 
+2023-07-03 04:08:25,762 INFO Periodo get Get - Periodos
+2023-07-03 04:08:25,764 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:25] "GET /api/coordenador HTTP/1.1" 200 -
+2023-07-03 04:08:25,774 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:25] "GET /api/periodo HTTP/1.1" 200 -
+2023-07-03 04:08:25,782 INFO Coordenador get Get - Coordenadores
+2023-07-03 04:08:25,789 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:25] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:08:25,800 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:25] "GET /api/coordenador HTTP/1.1" 200 -
+2023-07-03 04:08:25,823 INFO Grupo get Get - Grupos: 
+2023-07-03 04:08:25,844 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:25] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:08:27,199 INFO Aluno get Get - Alunos
+2023-07-03 04:08:27,204 INFO Grupo get Get - Grupos: 
+2023-07-03 04:08:27,213 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:08:27,226 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:27] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:08:27,244 INFO Aluno get Get - Alunos
+2023-07-03 04:08:27,244 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:27] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:08:27,259 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:27] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:08:27,261 INFO Grupo get Get - Grupos: 
+2023-07-03 04:08:27,269 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:27] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:08:27,270 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:08:27,294 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:27] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:08:27,308 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:27] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:08:29,829 INFO Aluno get Get - Alunos
+2023-07-03 04:08:29,834 INFO Curso get Get - Cursos
+2023-07-03 04:08:29,851 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:29] "GET /api/curso HTTP/1.1" 200 -
+2023-07-03 04:08:29,852 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:29] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:08:29,859 INFO Curso get Get - Cursos
+2023-07-03 04:08:29,863 INFO Aluno get Get - Alunos
+2023-07-03 04:08:29,871 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:29] "GET /api/curso HTTP/1.1" 200 -
+2023-07-03 04:08:29,885 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:29] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:08:32,055 INFO Aluno get Get - Alunos
+2023-07-03 04:08:32,059 INFO Grupo get Get - Grupos: 
+2023-07-03 04:08:32,067 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:08:32,080 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:32] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:08:32,093 INFO Aluno get Get - Alunos
+2023-07-03 04:08:32,103 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:32] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:08:32,118 INFO Grupo get Get - Grupos: 
+2023-07-03 04:08:32,122 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:32] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:08:32,127 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:32] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:08:32,139 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:08:32,147 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:32] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:08:32,168 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:08:32] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:09:05,056 INFO Aluno get Get - Alunos
+2023-07-03 04:09:05,061 INFO Grupo get Get - Grupos: 
+2023-07-03 04:09:05,068 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:09:05,085 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:05] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:09:05,097 INFO Aluno get Get - Alunos
+2023-07-03 04:09:05,100 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:05] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:09:05,114 INFO Grupo get Get - Grupos: 
+2023-07-03 04:09:05,121 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:05] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:09:05,126 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:05] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:09:05,138 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:09:05,149 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:05] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:09:05,169 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:05] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:09:11,239 INFO Aluno get Get - Alunos
+2023-07-03 04:09:11,240 INFO Grupo get Get - Grupos: 
+2023-07-03 04:09:11,259 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:09:11,267 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:11] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:09:11,281 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:11] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:09:11,286 INFO Aluno get Get - Alunos
+2023-07-03 04:09:11,297 INFO Grupo get Get - Grupos: 
+2023-07-03 04:09:11,316 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:11] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:09:11,320 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:11] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:09:11,328 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:11] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:09:11,330 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:09:11,353 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:11] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:09:13,380 INFO Aluno get Get - Alunos
+2023-07-03 04:09:13,385 INFO Grupo get Get - Grupos: 
+2023-07-03 04:09:13,403 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:09:13,409 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:13] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:09:13,423 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:13] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:09:13,425 INFO Aluno get Get - Alunos
+2023-07-03 04:09:13,437 INFO Grupo get Get - Grupos: 
+2023-07-03 04:09:13,453 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:13] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:09:13,458 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:13] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:09:13,468 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:13] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:09:13,468 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:09:13,495 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:13] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:09:17,528 INFO Periodo get Get - Periodos
+2023-07-03 04:09:17,536 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:17] "GET /api/periodo HTTP/1.1" 200 -
+2023-07-03 04:09:17,537 INFO Aluno get Get - Alunos
+2023-07-03 04:09:17,538 INFO Curso get Get - Cursos
+2023-07-03 04:09:17,547 INFO Periodo get Get - Periodos
+2023-07-03 04:09:17,564 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:17] "GET /api/curso HTTP/1.1" 200 -
+2023-07-03 04:09:17,564 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:17] "GET /api/periodo HTTP/1.1" 200 -
+2023-07-03 04:09:17,569 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:17] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:09:17,579 INFO Curso get Get - Cursos
+2023-07-03 04:09:17,585 INFO Aluno get Get - Alunos
+2023-07-03 04:09:17,595 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:17] "GET /api/curso HTTP/1.1" 200 -
+2023-07-03 04:09:17,606 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:17] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:09:20,152 INFO Aluno get Get - Alunos
+2023-07-03 04:09:20,158 INFO Grupo get Get - Grupos: 
+2023-07-03 04:09:20,166 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:09:20,182 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:20] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:09:20,196 INFO Aluno get Get - Alunos
+2023-07-03 04:09:20,198 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:20] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:09:20,220 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:20] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:09:20,222 INFO Grupo get Get - Grupos: 
+2023-07-03 04:09:20,226 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:20] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:09:20,236 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:09:20,253 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:20] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:09:20,274 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:20] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:09:29,787 INFO Periodo get Get - Periodos
+2023-07-03 04:09:29,796 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:29] "GET /api/periodo HTTP/1.1" 200 -
+2023-07-03 04:09:29,798 INFO Curso get Get - Cursos
+2023-07-03 04:09:29,802 INFO Aluno get Get - Alunos
+2023-07-03 04:09:29,807 INFO Periodo get Get - Periodos
+2023-07-03 04:09:29,812 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:29] "GET /api/curso HTTP/1.1" 200 -
+2023-07-03 04:09:29,833 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:29] "GET /api/periodo HTTP/1.1" 200 -
+2023-07-03 04:09:29,837 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:29] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:09:29,841 INFO Curso get Get - Cursos
+2023-07-03 04:09:29,855 INFO Aluno get Get - Alunos
+2023-07-03 04:09:29,857 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:29] "GET /api/curso HTTP/1.1" 200 -
+2023-07-03 04:09:29,875 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:29] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:09:31,811 INFO Aluno get Get - Alunos
+2023-07-03 04:09:31,815 INFO Grupo get Get - Grupos: 
+2023-07-03 04:09:31,825 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:09:31,839 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:31] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:09:31,855 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:31] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:09:31,856 INFO Aluno get Get - Alunos
+2023-07-03 04:09:31,870 INFO Grupo get Get - Grupos: 
+2023-07-03 04:09:31,876 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:31] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:09:31,886 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:31] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:09:31,892 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:09:31,902 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:31] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:09:31,922 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:09:31] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:11:55,650 INFO Aluno get Get - Alunos
+2023-07-03 04:11:55,652 INFO Grupo get Get - Grupos: 
+2023-07-03 04:11:55,662 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:11:55,676 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:11:55] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:11:55,689 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:11:55] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:11:55,698 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:11:55] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:12:03,647 INFO Aluno get Get - Alunos
+2023-07-03 04:12:03,648 INFO Grupo get Get - Grupos: 
+2023-07-03 04:12:03,656 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:12:03,674 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:12:03] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:12:03,676 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:12:03] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:12:03,691 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:12:03] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:12:07,646 INFO Aluno get Get - Alunos
+2023-07-03 04:12:07,650 INFO Grupo get Get - Grupos: 
+2023-07-03 04:12:07,653 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:12:07,668 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:12:07] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:12:07,679 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:12:07] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:12:07,690 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:12:07] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:12:17,646 INFO Aluno get Get - Alunos
+2023-07-03 04:12:17,648 INFO Grupo get Get - Grupos: 
+2023-07-03 04:12:17,654 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:12:17,670 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:12:17] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:12:17,680 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:12:17] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:12:17,692 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:12:17] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:14:09,648 INFO Aluno get Get - Alunos
+2023-07-03 04:14:09,648 INFO Grupo get Get - Grupos: 
+2023-07-03 04:14:09,652 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:14:09,676 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:14:09] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:14:09,683 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:14:09] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:14:09,694 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:14:09] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:14:21,057 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:14:21] "OPTIONS /api/alunogrupo HTTP/1.1" 200 -
+2023-07-03 04:14:21,063 INFO AlunoGrupo post Post - AlunosGrupo
+2023-07-03 04:14:21,065 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:14:21] "[31m[1mPOST /api/alunogrupo HTTP/1.1[0m" 400 -
+2023-07-03 04:14:28,004 INFO Aluno get Get - Alunos
+2023-07-03 04:14:28,006 INFO Grupo get Get - Grupos: 
+2023-07-03 04:14:28,021 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:14:28,028 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:14:28] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:14:28,052 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:14:28] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:14:28,053 INFO Aluno get Get - Alunos
+2023-07-03 04:14:28,068 INFO Grupo get Get - Grupos: 
+2023-07-03 04:14:28,077 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:14:28] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:14:28,085 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:14:28] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:14:28,092 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:14:28,098 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:14:28] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:14:28,120 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:14:28] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:14:38,825 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:14:38] "OPTIONS /api/alunogrupo HTTP/1.1" 200 -
+2023-07-03 04:14:38,832 INFO AlunoGrupo post Post - AlunosGrupo
+2023-07-03 04:14:38,835 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:14:38] "[31m[1mPOST /api/alunogrupo HTTP/1.1[0m" 400 -
+2023-07-03 04:14:42,889 INFO Periodo get Get - Periodos
+2023-07-03 04:14:42,899 INFO Coordenador get Get - Coordenadores
+2023-07-03 04:14:42,900 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:14:42] "GET /api/periodo HTTP/1.1" 200 -
+2023-07-03 04:14:42,904 INFO Grupo get Get - Grupos: 
+2023-07-03 04:14:42,917 INFO Periodo get Get - Periodos
+2023-07-03 04:14:42,921 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:14:42] "GET /api/coordenador HTTP/1.1" 200 -
+2023-07-03 04:14:42,929 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:14:42] "GET /api/periodo HTTP/1.1" 200 -
+2023-07-03 04:14:42,939 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:14:42] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:14:42,940 INFO Coordenador get Get - Coordenadores
+2023-07-03 04:14:42,950 INFO Grupo get Get - Grupos: 
+2023-07-03 04:14:42,971 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:14:42] "GET /api/coordenador HTTP/1.1" 200 -
+2023-07-03 04:14:42,978 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:14:42] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:14:44,431 INFO Aluno get Get - Alunos
+2023-07-03 04:14:44,441 INFO Grupo get Get - Grupos: 
+2023-07-03 04:14:44,448 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:14:44,456 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:14:44] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:14:44,472 INFO Aluno get Get - Alunos
+2023-07-03 04:14:44,485 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:14:44] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:14:44,498 INFO Grupo get Get - Grupos: 
+2023-07-03 04:14:44,501 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:14:44] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:14:44,502 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:14:44] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:14:44,520 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:14:44,525 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:14:44] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:14:44,548 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:14:44] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:15:12,248 INFO Aluno get Get - Alunos
+2023-07-03 04:15:12,253 INFO Grupo get Get - Grupos: 
+2023-07-03 04:15:12,263 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:15:12,279 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:15:12] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:15:12,294 INFO Aluno get Get - Alunos
+2023-07-03 04:15:12,294 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:15:12] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:15:12,311 INFO Grupo get Get - Grupos: 
+2023-07-03 04:15:12,315 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:15:12] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:15:12,322 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:15:12] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:15:12,330 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:15:12,343 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:15:12] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:15:12,361 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:15:12] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:15:17,034 INFO Periodo get Get - Periodos
+2023-07-03 04:15:17,038 INFO Curso get Get - Cursos
+2023-07-03 04:15:17,043 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:15:17] "GET /api/periodo HTTP/1.1" 200 -
+2023-07-03 04:15:17,044 INFO Aluno get Get - Alunos
+2023-07-03 04:15:17,053 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:15:17] "GET /api/curso HTTP/1.1" 200 -
+2023-07-03 04:15:17,059 INFO Periodo get Get - Periodos
+2023-07-03 04:15:17,069 INFO Curso get Get - Cursos
+2023-07-03 04:15:17,070 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:15:17] "GET /api/periodo HTTP/1.1" 200 -
+2023-07-03 04:15:17,079 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:15:17] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:15:17,084 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:15:17] "GET /api/curso HTTP/1.1" 200 -
+2023-07-03 04:15:17,088 INFO Aluno get Get - Alunos
+2023-07-03 04:15:17,101 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:15:17] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:15:19,071 INFO Aluno get Get - Alunos
+2023-07-03 04:15:19,084 INFO Grupo get Get - Grupos: 
+2023-07-03 04:15:19,086 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:15:19,099 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:15:19] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:15:19,118 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:15:19] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:15:19,122 INFO Aluno get Get - Alunos
+2023-07-03 04:15:19,134 INFO Grupo get Get - Grupos: 
+2023-07-03 04:15:19,137 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:15:19] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:15:19,152 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:15:19] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:15:19,153 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:15:19,162 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:15:19] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:15:19,189 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:15:19] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:20:05,655 INFO Aluno get Get - Alunos
+2023-07-03 04:20:05,656 INFO Grupo get Get - Grupos: 
+2023-07-03 04:20:05,659 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:20:05,678 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:20:05] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:20:05,687 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:20:05] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:20:05,692 INFO Aluno get Get - Alunos
+2023-07-03 04:20:05,702 INFO Grupo get Get - Grupos: 
+2023-07-03 04:20:05,704 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:20:05] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:20:05,719 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:20:05,721 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:20:05] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:20:05,738 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:20:05] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:20:05,755 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:20:05] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:20:17,054 INFO Aluno get Get - Alunos
+2023-07-03 04:20:17,062 INFO Grupo get Get - Grupos: 
+2023-07-03 04:20:17,086 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:20:17,087 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:20:17] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:20:17,107 INFO Aluno get Get - Alunos
+2023-07-03 04:20:17,108 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:20:17] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:20:17,127 INFO Grupo get Get - Grupos: 
+2023-07-03 04:20:17,139 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:20:17] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:20:17,140 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:20:17] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:20:17,152 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:20:17] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:20:17,157 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:20:17,178 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:20:17] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:21:15,782 INFO Aluno get Get - Alunos
+2023-07-03 04:21:15,788 INFO Grupo get Get - Grupos: 
+2023-07-03 04:21:15,797 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:21:15,816 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:21:15] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:21:15,829 INFO Aluno get Get - Alunos
+2023-07-03 04:21:15,831 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:21:15] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:21:15,845 INFO Grupo get Get - Grupos: 
+2023-07-03 04:21:15,848 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:21:15] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:21:15,854 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:21:15] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:21:15,862 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:21:15,872 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:21:15] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:21:15,890 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:21:15] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:21:55,604 INFO Aluno get Get - Alunos
+2023-07-03 04:21:55,606 INFO Grupo get Get - Grupos: 
+2023-07-03 04:21:55,612 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:21:55,648 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:21:55] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:21:55,659 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:21:55] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:21:55,678 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:21:55] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:22:02,302 INFO Aluno get Get - Alunos
+2023-07-03 04:22:02,314 INFO Grupo get Get - Grupos: 
+2023-07-03 04:22:02,321 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:22:02] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:22:02,322 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:22:02,343 INFO Aluno get Get - Alunos
+2023-07-03 04:22:02,357 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:22:02] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:22:02,372 INFO Grupo get Get - Grupos: 
+2023-07-03 04:22:02,373 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:22:02] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:22:02,382 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:22:02] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:22:02,392 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:22:02,396 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:22:02] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:22:02,419 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:22:02] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:22:57,659 INFO Aluno get Get - Alunos
+2023-07-03 04:22:57,663 INFO Grupo get Get - Grupos: 
+2023-07-03 04:22:57,669 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:22:57,683 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:22:57] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:22:57,692 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:22:57] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:22:57,706 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:22:57] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:23:03,424 INFO Aluno get Get - Alunos
+2023-07-03 04:23:03,429 INFO Grupo get Get - Grupos: 
+2023-07-03 04:23:03,436 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:23:03,459 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:23:03] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:23:03,472 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:23:03] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:23:03,473 INFO Aluno get Get - Alunos
+2023-07-03 04:23:03,489 INFO Grupo get Get - Grupos: 
+2023-07-03 04:23:03,492 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:23:03] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:23:03,504 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:23:03] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:23:03,506 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:23:03,519 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:23:03] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:23:03,538 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:23:03] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:28:10,661 INFO Aluno get Get - Alunos
+2023-07-03 04:28:10,666 INFO Grupo get Get - Grupos: 
+2023-07-03 04:28:10,674 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:28:10,690 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:28:10] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:28:10,705 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:28:10] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:28:10,718 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:28:10] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:28:19,621 INFO Aluno get Get - Alunos
+2023-07-03 04:28:19,628 INFO Grupo get Get - Grupos: 
+2023-07-03 04:28:19,635 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:28:19,656 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:28:19] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:28:19,670 INFO Aluno get Get - Alunos
+2023-07-03 04:28:19,676 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:28:19] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:28:19,691 INFO Grupo get Get - Grupos: 
+2023-07-03 04:28:19,692 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:28:19] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:28:19,700 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:28:19] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:28:19,707 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:28:19,718 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:28:19] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:28:19,737 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:28:19] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:29:31,659 INFO Aluno get Get - Alunos
+2023-07-03 04:29:31,661 INFO Grupo get Get - Grupos: 
+2023-07-03 04:29:31,665 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:29:31,689 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:29:31] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:29:31,695 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:29:31] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:29:31,708 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:29:31] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:30:04,939 INFO Aluno get Get - Alunos
+2023-07-03 04:30:04,943 INFO Grupo get Get - Grupos: 
+2023-07-03 04:30:04,960 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:30:04] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:30:04,970 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:30:04,979 INFO Aluno get Get - Alunos
+2023-07-03 04:30:04,987 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:30:04] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:30:05,001 INFO Grupo get Get - Grupos: 
+2023-07-03 04:30:05,008 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:30:05] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:30:05,015 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:30:05] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:30:05,023 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:30:05,027 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:30:05] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:30:05,048 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:30:05] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:35:42,652 INFO Aluno get Get - Alunos
+2023-07-03 04:35:42,654 INFO Grupo get Get - Grupos: 
+2023-07-03 04:35:42,657 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:35:42,678 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:35:42] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:35:42,686 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:35:42] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:35:42,687 INFO Aluno get Get - Alunos
+2023-07-03 04:35:42,696 INFO Grupo get Get - Grupos: 
+2023-07-03 04:35:42,698 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:35:42] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:35:42,713 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:35:42,714 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:35:42] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:35:42,726 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:35:42] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:35:42,744 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:35:42] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:36:05,707 INFO Aluno get Get - Alunos
+2023-07-03 04:36:05,708 INFO Grupo get Get - Grupos: 
+2023-07-03 04:36:05,716 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:36:05,765 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:36:05] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:36:05,772 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:36:05] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:36:05,775 INFO Aluno get Get - Alunos
+2023-07-03 04:36:05,781 INFO Grupo get Get - Grupos: 
+2023-07-03 04:36:05,789 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:36:05] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:36:05,800 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:36:05] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:36:05,801 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:36:05,807 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:36:05] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:36:05,823 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:36:05] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:36:06,649 INFO Aluno get Get - Alunos
+2023-07-03 04:36:06,655 INFO Grupo get Get - Grupos: 
+2023-07-03 04:36:06,670 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:36:06] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:36:06,671 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:36:06,683 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:36:06] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:36:06,687 INFO Aluno get Get - Alunos
+2023-07-03 04:36:06,709 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:36:06] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:36:06,714 INFO Grupo get Get - Grupos: 
+2023-07-03 04:36:06,717 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:36:06] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:36:06,736 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:36:06] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:36:06,743 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:36:06,780 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:36:06] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:36:19,082 INFO Aluno get Get - Alunos
+2023-07-03 04:36:19,086 INFO Grupo get Get - Grupos: 
+2023-07-03 04:36:19,090 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:36:19,114 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:36:19] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:36:19,127 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:36:19] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:36:19,133 INFO Aluno get Get - Alunos
+2023-07-03 04:36:19,139 INFO Grupo get Get - Grupos: 
+2023-07-03 04:36:19,149 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:36:19] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:36:19,164 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:36:19] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:36:19,167 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:36:19,173 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:36:19] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:36:19,200 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:36:19] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:39:02,512 INFO Aluno get Get - Alunos
+2023-07-03 04:39:02,515 INFO Grupo get Get - Grupos: 
+2023-07-03 04:39:02,521 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:39:02,538 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:39:02] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:39:02,550 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:39:02] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:39:02,559 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:39:02] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:40:46,874 INFO Aluno get Get - Alunos
+2023-07-03 04:40:46,875 INFO Grupo get Get - Grupos: 
+2023-07-03 04:40:46,877 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:40:46,897 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:40:46] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:40:46,908 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:40:46] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:40:46,918 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:40:46] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:41:31,019 INFO Aluno get Get - Alunos
+2023-07-03 04:41:31,025 INFO Grupo get Get - Grupos: 
+2023-07-03 04:41:31,027 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:41:31,057 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:41:31] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:41:31,065 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:41:31] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:41:31,074 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:41:31] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:41:54,069 INFO Aluno get Get - Alunos
+2023-07-03 04:41:54,079 INFO Grupo get Get - Grupos: 
+2023-07-03 04:41:54,088 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:41:54,100 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:41:54] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:41:54,118 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:41:54] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:41:54,136 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:41:54] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:42:13,794 INFO Periodo get Get - Periodos
+2023-07-03 04:42:13,798 INFO Coordenador get Get - Coordenadores
+2023-07-03 04:42:13,801 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:42:13] "GET /api/periodo HTTP/1.1" 200 -
+2023-07-03 04:42:13,802 INFO Grupo get Get - Grupos: 
+2023-07-03 04:42:13,819 INFO Periodo get Get - Periodos
+2023-07-03 04:42:13,824 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:42:13] "GET /api/coordenador HTTP/1.1" 200 -
+2023-07-03 04:42:13,835 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:42:13] "GET /api/periodo HTTP/1.1" 200 -
+2023-07-03 04:42:13,836 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:42:13] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:42:13,840 INFO Coordenador get Get - Coordenadores
+2023-07-03 04:42:13,845 INFO Grupo get Get - Grupos: 
+2023-07-03 04:42:13,858 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:42:13] "GET /api/coordenador HTTP/1.1" 200 -
+2023-07-03 04:42:13,868 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:42:13] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:42:20,253 INFO Grupo get Get - Grupos: 
+2023-07-03 04:42:20,254 INFO Aluno get Get - Alunos
+2023-07-03 04:42:20,259 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:42:20,283 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:42:20] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:42:20,290 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:42:20] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:42:20,300 INFO Aluno get Get - Alunos
+2023-07-03 04:42:20,303 INFO Grupo get Get - Grupos: 
+2023-07-03 04:42:20,304 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:42:20] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:42:20,317 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:42:20,327 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:42:20] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:42:20,335 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:42:20] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:42:20,353 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:42:20] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:42:26,705 INFO Periodo get Get - Periodos
+2023-07-03 04:42:26,709 INFO Coordenador get Get - Coordenadores
+2023-07-03 04:42:26,712 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:42:26] "GET /api/periodo HTTP/1.1" 200 -
+2023-07-03 04:42:26,713 INFO Grupo get Get - Grupos: 
+2023-07-03 04:42:26,724 INFO Periodo get Get - Periodos
+2023-07-03 04:42:26,735 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:42:26] "GET /api/periodo HTTP/1.1" 200 -
+2023-07-03 04:42:26,738 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:42:26] "GET /api/coordenador HTTP/1.1" 200 -
+2023-07-03 04:42:26,749 INFO Coordenador get Get - Coordenadores
+2023-07-03 04:42:26,749 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:42:26] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:42:26,757 INFO Grupo get Get - Grupos: 
+2023-07-03 04:42:26,763 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:42:26] "GET /api/coordenador HTTP/1.1" 200 -
+2023-07-03 04:42:26,777 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:42:26] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:42:49,717 INFO Aluno get Get - Alunos
+2023-07-03 04:42:49,724 INFO Grupo get Get - Grupos: 
+2023-07-03 04:42:49,729 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:42:49,742 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:42:49] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:42:49,754 INFO Aluno get Get - Alunos
+2023-07-03 04:42:49,761 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:42:49] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:42:49,774 INFO Grupo get Get - Grupos: 
+2023-07-03 04:42:49,781 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:42:49] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:42:49,781 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:42:49] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:42:49,789 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:42:49,801 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:42:49] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:42:49,817 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:42:49] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:43:40,026 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:43:40] "OPTIONS /api/alunogrupo HTTP/1.1" 200 -
+2023-07-03 04:43:40,031 INFO AlunoGrupo post Post - AlunosGrupo
+2023-07-03 04:43:40,033 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:43:40] "[31m[1mPOST /api/alunogrupo HTTP/1.1[0m" 400 -
+2023-07-03 04:43:43,459 INFO Aluno get Get - Alunos
+2023-07-03 04:43:43,462 INFO Grupo get Get - Grupos: 
+2023-07-03 04:43:43,467 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:43:43,489 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:43:43] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:43:43,506 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:43:43] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:43:43,508 INFO Aluno get Get - Alunos
+2023-07-03 04:43:43,522 INFO Grupo get Get - Grupos: 
+2023-07-03 04:43:43,531 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:43:43] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:43:43,538 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:43:43] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:43:43,547 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:43:43,553 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:43:43] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:43:43,576 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:43:43] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:43:57,146 INFO Aluno get Get - Alunos
+2023-07-03 04:43:57,151 INFO Grupo get Get - Grupos: 
+2023-07-03 04:43:57,160 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:43:57,177 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:43:57] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:43:57,187 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:43:57] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:43:57,189 INFO Aluno get Get - Alunos
+2023-07-03 04:43:57,203 INFO Grupo get Get - Grupos: 
+2023-07-03 04:43:57,209 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:43:57] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:43:57,217 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:43:57] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:43:57,220 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:43:57,231 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:43:57] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:43:57,246 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:43:57] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:45:39,689 INFO Coordenador get Get - Coordenadores
+2023-07-03 04:45:39,706 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:45:39] "GET /api/coordenador HTTP/1.1" 200 -
+2023-07-03 04:45:39,710 INFO Coordenador get Get - Coordenadores
+2023-07-03 04:45:39,722 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:45:39] "GET /api/coordenador HTTP/1.1" 200 -
+2023-07-03 04:45:51,217 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:45:51] "OPTIONS /api/login HTTP/1.1" 200 -
+2023-07-03 04:45:51,229 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:45:51] "POST /api/login HTTP/1.1" 200 -
+2023-07-03 04:45:52,461 INFO Curso get Get - Cursos
+2023-07-03 04:45:52,465 INFO Coordenador get Get - Coordenadores
+2023-07-03 04:45:52,472 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:45:52] "GET /api/curso HTTP/1.1" 200 -
+2023-07-03 04:45:52,479 INFO Curso get Get - Cursos
+2023-07-03 04:45:52,481 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:45:52] "GET /api/coordenador HTTP/1.1" 200 -
+2023-07-03 04:45:52,493 INFO Coordenador get Get - Coordenadores
+2023-07-03 04:45:52,493 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:45:52] "GET /api/curso HTTP/1.1" 200 -
+2023-07-03 04:45:52,504 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:45:52] "GET /api/coordenador HTTP/1.1" 200 -
+2023-07-03 04:45:54,328 INFO Aluno get Get - Alunos
+2023-07-03 04:45:54,332 INFO Grupo get Get - Grupos: 
+2023-07-03 04:45:54,339 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:45:54,356 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:45:54] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:45:54,369 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:45:54] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:45:54,370 INFO Aluno get Get - Alunos
+2023-07-03 04:45:54,379 INFO Grupo get Get - Grupos: 
+2023-07-03 04:45:54,392 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:45:54] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:45:54,401 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:45:54] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:45:54,404 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:45:54,409 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:45:54] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:45:54,434 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:45:54] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:48:16,056 INFO Aluno get Get - Alunos
+2023-07-03 04:48:16,059 INFO Grupo get Get - Grupos: 
+2023-07-03 04:48:16,066 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:48:16,087 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:48:16] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:48:16,103 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:48:16] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:48:16,109 INFO Aluno get Get - Alunos
+2023-07-03 04:48:16,120 INFO Grupo get Get - Grupos: 
+2023-07-03 04:48:16,122 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:48:16] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:48:16,139 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:48:16] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:48:16,140 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:48:16,152 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:48:16] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:48:16,170 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:48:16] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:48:25,054 INFO Aluno get Get - Alunos
+2023-07-03 04:48:25,056 INFO Curso get Get - Cursos
+2023-07-03 04:48:25,074 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:48:25] "GET /api/curso HTTP/1.1" 200 -
+2023-07-03 04:48:25,076 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:48:25] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:48:25,080 INFO Curso get Get - Cursos
+2023-07-03 04:48:25,084 INFO Aluno get Get - Alunos
+2023-07-03 04:48:25,090 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:48:25] "GET /api/curso HTTP/1.1" 200 -
+2023-07-03 04:48:25,100 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:48:25] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:48:27,668 INFO Grupo get Get - Grupos: 
+2023-07-03 04:48:27,683 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:48:27] "GET /api/grupo?curso_id=1 HTTP/1.1" 200 -
+2023-07-03 04:48:33,604 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:48:33] "OPTIONS /api/salvar-json HTTP/1.1" 200 -
+2023-07-03 04:48:33,613 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:48:33] "POST /api/salvar-json HTTP/1.1" 200 -
+2023-07-03 04:48:33,981 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:48:33] "GET /get_emails HTTP/1.1" 200 -
+2023-07-03 04:48:34,209 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:48:34] "GET /get_emails HTTP/1.1" 200 -
+2023-07-03 04:48:37,915 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:48:37] "OPTIONS /send HTTP/1.1" 200 -
+2023-07-03 04:48:43,037 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:48:43] "POST /send HTTP/1.1" 200 -
+2023-07-03 04:48:44,974 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:48:44] "OPTIONS /api/alunogrupo HTTP/1.1" 200 -
+2023-07-03 04:48:45,023 INFO Aluno get Get - Alunos
+2023-07-03 04:48:45,036 INFO Curso get Get - Cursos
+2023-07-03 04:48:45,053 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:48:45] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:48:45,053 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:48:45] "GET /api/curso HTTP/1.1" 200 -
+2023-07-03 04:48:45,057 INFO Aluno get Get - Alunos
+2023-07-03 04:48:45,060 INFO Curso get Get - Cursos
+2023-07-03 04:48:45,076 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:48:45] "GET /api/curso HTTP/1.1" 200 -
+2023-07-03 04:48:45,076 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:48:45] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:48:45,284 INFO AlunoGrupo post Post - AlunosGrupo
+2023-07-03 04:48:45,319 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:48:45] "[35m[1mPOST /api/alunogrupo HTTP/1.1[0m" 201 -
+2023-07-03 04:48:46,089 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:48:46] "GET /get_emails HTTP/1.1" 200 -
+2023-07-03 04:48:47,877 INFO Aluno get Get - Alunos
+2023-07-03 04:48:47,887 INFO Grupo get Get - Grupos: 
+2023-07-03 04:48:47,896 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:48:47,912 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:48:47] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:48:47,927 INFO Aluno get Get - Alunos
+2023-07-03 04:48:47,937 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:48:47] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:48:47,951 INFO Grupo get Get - Grupos: 
+2023-07-03 04:48:47,955 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:48:47] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:48:47,957 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:48:47] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:48:47,966 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:48:47,976 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:48:47] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:48:48,002 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:48:48] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:51:21,484 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:51:21] "OPTIONS /api/alunogrupo/40 HTTP/1.1" 200 -
+2023-07-03 04:51:21,489 INFO AlunoGrupo delete Delete - Alunos
+2023-07-03 04:51:21,503 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:51:21] "DELETE /api/alunogrupo/40 HTTP/1.1" 200 -
+2023-07-03 04:51:24,406 INFO Aluno get Get - Alunos
+2023-07-03 04:51:24,414 INFO Grupo get Get - Grupos: 
+2023-07-03 04:51:24,415 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:51:24,447 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:51:24] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:51:24,462 INFO Aluno get Get - Alunos
+2023-07-03 04:51:24,467 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:51:24] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:51:24,483 INFO Grupo get Get - Grupos: 
+2023-07-03 04:51:24,485 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:51:24] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:51:24,489 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:51:24] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:51:24,496 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:51:24,509 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:51:24] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:51:24,527 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:51:24] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:51:26,145 INFO Aluno get Get - Alunos
+2023-07-03 04:51:26,148 INFO Curso get Get - Cursos
+2023-07-03 04:51:26,168 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:51:26] "GET /api/curso HTTP/1.1" 200 -
+2023-07-03 04:51:26,170 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:51:26] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:51:26,174 INFO Curso get Get - Cursos
+2023-07-03 04:51:26,177 INFO Aluno get Get - Alunos
+2023-07-03 04:51:26,187 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:51:26] "GET /api/curso HTTP/1.1" 200 -
+2023-07-03 04:51:26,197 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:51:26] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:51:28,477 INFO Grupo get Get - Grupos: 
+2023-07-03 04:51:28,491 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:51:28] "GET /api/grupo?curso_id=1 HTTP/1.1" 200 -
+2023-07-03 04:51:34,316 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:51:34] "OPTIONS /api/salvar-json HTTP/1.1" 200 -
+2023-07-03 04:51:34,323 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:51:34] "POST /api/salvar-json HTTP/1.1" 200 -
+2023-07-03 04:51:34,673 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:51:34] "GET /get_emails HTTP/1.1" 200 -
+2023-07-03 04:51:34,937 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:51:34] "GET /get_emails HTTP/1.1" 200 -
+2023-07-03 04:51:36,730 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:51:36] "OPTIONS /send HTTP/1.1" 200 -
+2023-07-03 04:51:41,209 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:51:41] "POST /send HTTP/1.1" 200 -
+2023-07-03 04:51:42,946 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:51:42] "OPTIONS /api/alunogrupo HTTP/1.1" 200 -
+2023-07-03 04:51:42,997 INFO Aluno get Get - Alunos
+2023-07-03 04:51:42,998 INFO Curso get Get - Cursos
+2023-07-03 04:51:43,015 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:51:43] "GET /api/curso HTTP/1.1" 200 -
+2023-07-03 04:51:43,020 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:51:43] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:51:43,024 INFO Curso get Get - Cursos
+2023-07-03 04:51:43,028 INFO Aluno get Get - Alunos
+2023-07-03 04:51:43,037 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:51:43] "GET /api/curso HTTP/1.1" 200 -
+2023-07-03 04:51:43,048 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:51:43] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:51:43,263 INFO AlunoGrupo post Post - AlunosGrupo
+2023-07-03 04:51:43,282 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:51:43] "[35m[1mPOST /api/alunogrupo HTTP/1.1[0m" 201 -
+2023-07-03 04:51:44,642 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:51:44] "GET /get_emails HTTP/1.1" 200 -
+2023-07-03 04:51:46,075 INFO Aluno get Get - Alunos
+2023-07-03 04:51:46,087 INFO Grupo get Get - Grupos: 
+2023-07-03 04:51:46,090 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:51:46,097 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:51:46] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:51:46,109 INFO Aluno get Get - Alunos
+2023-07-03 04:51:46,131 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:51:46] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:51:46,141 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:51:46] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:51:46,142 INFO Grupo get Get - Grupos: 
+2023-07-03 04:51:46,148 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:51:46] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:51:46,158 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:51:46,175 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:51:46] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:51:46,197 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:51:46] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:52:15,778 INFO Aluno get Get - Alunos
+2023-07-03 04:52:15,785 INFO Grupo get Get - Grupos: 
+2023-07-03 04:52:15,798 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:52:15,805 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:52:15] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:52:15,822 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:52:15] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:52:15,824 INFO Aluno get Get - Alunos
+2023-07-03 04:52:15,833 INFO Grupo get Get - Grupos: 
+2023-07-03 04:52:15,857 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:52:15] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:52:15,860 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:52:15] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:52:15,868 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:52:15] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:52:15,869 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:52:15,897 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:52:15] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:52:18,214 INFO Aluno get Get - Alunos
+2023-07-03 04:52:18,218 INFO Curso get Get - Cursos
+2023-07-03 04:52:18,237 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:52:18] "GET /api/curso HTTP/1.1" 200 -
+2023-07-03 04:52:18,238 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:52:18] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:52:18,243 INFO Curso get Get - Cursos
+2023-07-03 04:52:18,245 INFO Aluno get Get - Alunos
+2023-07-03 04:52:18,253 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:52:18] "GET /api/curso HTTP/1.1" 200 -
+2023-07-03 04:52:18,266 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:52:18] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:52:20,827 INFO Grupo get Get - Grupos: 
+2023-07-03 04:52:20,841 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:52:20] "GET /api/grupo?curso_id=1 HTTP/1.1" 200 -
+2023-07-03 04:52:25,865 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:52:25] "OPTIONS /api/salvar-json HTTP/1.1" 200 -
+2023-07-03 04:52:25,873 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:52:25] "POST /api/salvar-json HTTP/1.1" 200 -
+2023-07-03 04:52:26,209 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:52:26] "GET /get_emails HTTP/1.1" 200 -
+2023-07-03 04:52:26,470 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:52:26] "GET /get_emails HTTP/1.1" 200 -
+2023-07-03 04:52:28,203 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:52:28] "OPTIONS /send HTTP/1.1" 200 -
+2023-07-03 04:52:33,282 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:52:33] "POST /send HTTP/1.1" 200 -
+2023-07-03 04:52:35,043 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:52:35] "OPTIONS /api/alunogrupo HTTP/1.1" 200 -
+2023-07-03 04:52:35,091 INFO Aluno get Get - Alunos
+2023-07-03 04:52:35,094 INFO Curso get Get - Cursos
+2023-07-03 04:52:35,113 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:52:35] "GET /api/curso HTTP/1.1" 200 -
+2023-07-03 04:52:35,113 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:52:35] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:52:35,118 INFO Curso get Get - Cursos
+2023-07-03 04:52:35,122 INFO Aluno get Get - Alunos
+2023-07-03 04:52:35,130 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:52:35] "GET /api/curso HTTP/1.1" 200 -
+2023-07-03 04:52:35,145 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:52:35] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:52:35,353 INFO AlunoGrupo post Post - AlunosGrupo
+2023-07-03 04:52:35,357 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:52:35] "[31m[1mPOST /api/alunogrupo HTTP/1.1[0m" 400 -
+2023-07-03 04:52:40,707 INFO Aluno get Get - Alunos
+2023-07-03 04:52:40,713 INFO Grupo get Get - Grupos: 
+2023-07-03 04:52:40,721 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:52:40,747 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:52:40] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:52:40,751 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:52:40] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:52:40,764 INFO Grupo get Get - Grupos: 
+2023-07-03 04:52:40,765 INFO Aluno get Get - Alunos
+2023-07-03 04:52:40,781 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:52:40] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -
+2023-07-03 04:52:40,794 INFO AlunoGrupo get Get - AlunosGrupo
+2023-07-03 04:52:40,797 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:52:40] "GET /api/aluno HTTP/1.1" 200 -
+2023-07-03 04:52:40,801 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:52:40] "GET /api/grupo HTTP/1.1" 200 -
+2023-07-03 04:52:40,830 INFO _internal _log 127.0.0.1 - - [03/Jul/2023 04:52:40] "GET /api/alunogrupo?_expand=aluno&_expand=grupo HTTP/1.1" 200 -

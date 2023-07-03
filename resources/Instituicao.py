@@ -60,7 +60,11 @@ class InstituicoesResource(Resource):
 
         endereco_id = args['endereco']['id']
         if endereco_id:
-            instituicao.endereco = Endereco.query.get(endereco_id)
+            endereco = Endereco.query.get(endereco_id)
+            if not endereco:
+                return {'message': 'Invalid Endereco'}, 400
+            instituicao.endereco = endereco
+
         db.session.commit()
 
         return {'message': 'Instituicao updated successfully'}, 200

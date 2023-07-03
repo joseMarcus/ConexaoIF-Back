@@ -1,0 +1,48 @@
+{
+  "emails": [
+    {
+      "id": 2,
+      "tipo": "aluno",
+      "email": "josejunior14535@gmail.com",
+      "link": "whatsappweb.com.br",
+      "titulo": "Grupo do Whatsapp - TSI-2022-P1",
+      "curso_id": 1,
+      "mensagem": "Bem vindo!Clique no link para entrar.",
+      "grupo_id": {
+        "id": 4,
+        "titulo": "Grupo do Whatsapp - TSI-2022-P1",
+        "link": "whatsappweb.com.br",
+        "mensagem": "Bem vindo!Clique no link para entrar.",
+        "periodo": {
+          "id": 1,
+          "semestrereferencia": "1"
+        },
+        "coordenador": {
+          "id": 4,
+          "nome": "Otacilio",
+          "email": "ota@gmail.com",
+          "senha": "ota123",
+          "telefone": "839919413",
+          "disciplina": "Topicos especias",
+          "registrodeTrabalho": "30000",
+          "curso": {
+            "id": 1,
+            "nome": "TSI",
+            "instituicao": {
+              "id": 1,
+              "nome": "IFPB - CAMPUS GUARABIRA",
+              "endereco": {
+                "id": 1,
+                "rua": "RUA PROFESSOR CARLOS LEONARDO ARCOVERDE SN RODOVIA, PB-057",
+                "bairro": "",
+                "cep": "58200-000",
+                "numero": "S/N",
+                "complemento": ""
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
