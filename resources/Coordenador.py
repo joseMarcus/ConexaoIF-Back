@@ -117,6 +117,9 @@ class CoordenadoresResource(Resource):
             # Check if senha already exists for another Coordenador
             if Coordenador.query.filter((Coordenador.senha == coordenador.senha) & (Coordenador.id != coordenador_id)).first():
                 return {'message': 'Senha already exists'}, 400
+            
+            if Coordenador.query.filter((Coordenador.nome == coordenador.nome) & (Coordenador.id != coordenador_id)).first():
+                return {'message': 'Nome Ja Existente!'}, 400
 
             # Save the updated Coordenador to the database
             db.session.commit()
