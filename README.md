@@ -1,6 +1,6 @@
 # ConexãoIF
 
-virtualenv venv
+```virtualenv venv
 source venv/bin/activate
 pip install -r requirements.txt
 export FLASK_APP=app.py
